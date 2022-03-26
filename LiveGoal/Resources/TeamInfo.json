@@ -1,0 +1,36 @@
+{
+    "get": "teams",
+    "parameters": {
+        "league": "140",
+        "id": "531",
+        "season": "2021"
+    },
+    "errors": [],
+    "results": 1,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "code": "BIL",
+                "country": "Spain",
+                "founded": 1898,
+                "national": false,
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "venue": {
+                "id": 1460,
+                "name": "San Mamés Barria",
+                "address": "Rafael Moreno Pitxitxi Kalea",
+                "city": "Bilbao",
+                "capacity": 53289,
+                "surface": "grass",
+                "image": "https://media.api-sports.io/football/venues/1460.png"
+            }
+        }
+    ]
+}

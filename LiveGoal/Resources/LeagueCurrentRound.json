@@ -1,0 +1,52 @@
+{
+    "get": "leagues",
+    "parameters": {
+        "current": "true",
+        "id": "140"
+    },
+    "errors": [],
+    "results": 1,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "type": "League",
+                "logo": "https://media.api-sports.io/football/leagues/140.png"
+            },
+            "country": {
+                "name": "Spain",
+                "code": "ES",
+                "flag": "https://media.api-sports.io/flags/es.svg"
+            },
+            "seasons": [
+                {
+                    "year": 2021,
+                    "start": "2021-08-13",
+                    "end": "2022-05-22",
+                    "current": true,
+                    "coverage": {
+                        "fixtures": {
+                            "events": true,
+                            "lineups": true,
+                            "statistics_fixtures": true,
+                            "statistics_players": true
+                        },
+                        "standings": true,
+                        "players": true,
+                        "top_scorers": true,
+                        "top_assists": true,
+                        "top_cards": true,
+                        "injuries": true,
+                        "predictions": true,
+                        "odds": true
+                    }
+                }
+            ]
+        }
+    ]
+}

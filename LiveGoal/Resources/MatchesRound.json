@@ -1,0 +1,696 @@
+{
+    "get": "fixtures",
+    "parameters": {
+        "league": "140",
+        "round": "Regular Season - 28",
+        "season": "2021"
+    },
+    "errors": [],
+    "results": 10,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "fixture": {
+                "id": 721009,
+                "referee": "Pablo González",
+                "timezone": "UTC",
+                "date": "2022-03-11T20:00:00+00:00",
+                "timestamp": 1647028800,
+                "periods": {
+                    "first": 1647028800,
+                    "second": 1647032400
+                },
+                "venue": {
+                    "id": 1461,
+                    "name": "Estadio Wanda Metropolitano",
+                    "city": "Madrid"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 530,
+                    "name": "Atletico Madrid",
+                    "logo": "https://media.api-sports.io/football/teams/530.png",
+                    "winner": true
+                },
+                "away": {
+                    "id": 724,
+                    "name": "Cadiz",
+                    "logo": "https://media.api-sports.io/football/teams/724.png",
+                    "winner": false
+                }
+            },
+            "goals": {
+                "home": 2,
+                "away": 1
+            },
+            "score": {
+                "halftime": {
+                    "home": 1,
+                    "away": 1
+                },
+                "fulltime": {
+                    "home": 2,
+                    "away": 1
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 721010,
+                "referee": "Ricardo De Burgos",
+                "timezone": "UTC",
+                "date": "2022-03-13T20:00:00+00:00",
+                "timestamp": 1647201600,
+                "periods": {
+                    "first": 1647201600,
+                    "second": 1647205200
+                },
+                "venue": {
+                    "id": 1462,
+                    "name": "Camp Nou",
+                    "city": "Barcelona"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 529,
+                    "name": "Barcelona",
+                    "logo": "https://media.api-sports.io/football/teams/529.png",
+                    "winner": true
+                },
+                "away": {
+                    "id": 727,
+                    "name": "Osasuna",
+                    "logo": "https://media.api-sports.io/football/teams/727.png",
+                    "winner": false
+                }
+            },
+            "goals": {
+                "home": 4,
+                "away": 0
+            },
+            "score": {
+                "halftime": {
+                    "home": 3,
+                    "away": 0
+                },
+                "fulltime": {
+                    "home": 4,
+                    "away": 0
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 721011,
+                "referee": "Antonio Mateu",
+                "timezone": "UTC",
+                "date": "2022-03-13T15:15:00+00:00",
+                "timestamp": 1647184500,
+                "periods": {
+                    "first": 1647184500,
+                    "second": 1647188100
+                },
+                "venue": {
+                    "id": 1489,
+                    "name": "Estadio Benito Villamarín",
+                    "city": "Sevilla"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 543,
+                    "name": "Real Betis",
+                    "logo": "https://media.api-sports.io/football/teams/543.png",
+                    "winner": true
+                },
+                "away": {
+                    "id": 531,
+                    "name": "Athletic Club",
+                    "logo": "https://media.api-sports.io/football/teams/531.png",
+                    "winner": false
+                }
+            },
+            "goals": {
+                "home": 1,
+                "away": 0
+            },
+            "score": {
+                "halftime": {
+                    "home": 1,
+                    "away": 0
+                },
+                "fulltime": {
+                    "home": 1,
+                    "away": 0
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 721012,
+                "referee": "José Sánchez",
+                "timezone": "UTC",
+                "date": "2022-03-14T20:00:00+00:00",
+                "timestamp": 1647288000,
+                "periods": {
+                    "first": 1647288000,
+                    "second": 1647291600
+                },
+                "venue": {
+                    "id": 12597,
+                    "name": "Visit Mallorca Estadi",
+                    "city": "Palma de Mallorca"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 798,
+                    "name": "Mallorca",
+                    "logo": "https://media.api-sports.io/football/teams/798.png",
+                    "winner": false
+                },
+                "away": {
+                    "id": 541,
+                    "name": "Real Madrid",
+                    "logo": "https://media.api-sports.io/football/teams/541.png",
+                    "winner": true
+                }
+            },
+            "goals": {
+                "home": 0,
+                "away": 3
+            },
+            "score": {
+                "halftime": {
+                    "home": 0,
+                    "away": 0
+                },
+                "fulltime": {
+                    "home": 0,
+                    "away": 3
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 721013,
+                "referee": "Guillermo Cuadra",
+                "timezone": "UTC",
+                "date": "2022-03-12T20:00:00+00:00",
+                "timestamp": 1647115200,
+                "periods": {
+                    "first": 1647115200,
+                    "second": 1647118800
+                },
+                "venue": {
+                    "id": 1476,
+                    "name": "Coliseum Alfonso Pérez",
+                    "city": "Getafe"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 546,
+                    "name": "Getafe",
+                    "logo": "https://media.api-sports.io/football/teams/546.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 532,
+                    "name": "Valencia",
+                    "logo": "https://media.api-sports.io/football/teams/532.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": 0,
+                "away": 0
+            },
+            "score": {
+                "halftime": {
+                    "home": 0,
+                    "away": 0
+                },
+                "fulltime": {
+                    "home": 0,
+                    "away": 0
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 721014,
+                "referee": "Carlos del Cerro",
+                "timezone": "UTC",
+                "date": "2022-03-12T15:15:00+00:00",
+                "timestamp": 1647098100,
+                "periods": {
+                    "first": 1647098100,
+                    "second": 1647101700
+                },
+                "venue": {
+                    "id": 1479,
+                    "name": "Estadio Nuevo Los Cármenes",
+                    "city": "Granada"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 715,
+                    "name": "Granada CF",
+                    "logo": "https://media.api-sports.io/football/teams/715.png",
+                    "winner": false
+                },
+                "away": {
+                    "id": 797,
+                    "name": "Elche",
+                    "logo": "https://media.api-sports.io/football/teams/797.png",
+                    "winner": true
+                }
+            },
+            "goals": {
+                "home": 0,
+                "away": 1
+            },
+            "score": {
+                "halftime": {
+                    "home": 0,
+                    "away": 1
+                },
+                "fulltime": {
+                    "home": 0,
+                    "away": 1
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 721015,
+                "referee": "Isidro Díaz de Mera",
+                "timezone": "UTC",
+                "date": "2022-03-12T13:00:00+00:00",
+                "timestamp": 1647090000,
+                "periods": {
+                    "first": 1647090000,
+                    "second": 1647093600
+                },
+                "venue": {
+                    "id": 1482,
+                    "name": "Estadio Ciudad de Valencia",
+                    "city": "Valencia"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 539,
+                    "name": "Levante",
+                    "logo": "https://media.api-sports.io/football/teams/539.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 540,
+                    "name": "Espanyol",
+                    "logo": "https://media.api-sports.io/football/teams/540.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": 1,
+                "away": 1
+            },
+            "score": {
+                "halftime": {
+                    "home": 0,
+                    "away": 0
+                },
+                "fulltime": {
+                    "home": 1,
+                    "away": 1
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 721016,
+                "referee": "Jorge Figueroa",
+                "timezone": "UTC",
+                "date": "2022-03-13T17:30:00+00:00",
+                "timestamp": 1647192600,
+                "periods": {
+                    "first": 1647192600,
+                    "second": 1647196200
+                },
+                "venue": {
+                    "id": 1491,
+                    "name": "Reale Arena",
+                    "city": "Donostia-San Sebastián"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 548,
+                    "name": "Real Sociedad",
+                    "logo": "https://media.api-sports.io/football/teams/548.png",
+                    "winner": true
+                },
+                "away": {
+                    "id": 542,
+                    "name": "Alaves",
+                    "logo": "https://media.api-sports.io/football/teams/542.png",
+                    "winner": false
+                }
+            },
+            "goals": {
+                "home": 1,
+                "away": 0
+            },
+            "score": {
+                "halftime": {
+                    "home": 0,
+                    "away": 0
+                },
+                "fulltime": {
+                    "home": 1,
+                    "away": 0
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 721017,
+                "referee": "Juan Martínez",
+                "timezone": "UTC",
+                "date": "2022-03-13T13:00:00+00:00",
+                "timestamp": 1647176400,
+                "periods": {
+                    "first": 1647176400,
+                    "second": 1647180000
+                },
+                "venue": {
+                    "id": 1488,
+                    "name": "Estadio de Vallecas",
+                    "city": "Madrid"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 728,
+                    "name": "Rayo Vallecano",
+                    "logo": "https://media.api-sports.io/football/teams/728.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 536,
+                    "name": "Sevilla",
+                    "logo": "https://media.api-sports.io/football/teams/536.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": 1,
+                "away": 1
+            },
+            "score": {
+                "halftime": {
+                    "home": 0,
+                    "away": 0
+                },
+                "fulltime": {
+                    "home": 1,
+                    "away": 1
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 721018,
+                "referee": "Santiago Jaime",
+                "timezone": "UTC",
+                "date": "2022-03-12T17:30:00+00:00",
+                "timestamp": 1647106200,
+                "periods": {
+                    "first": 1647106200,
+                    "second": 1647109800
+                },
+                "venue": {
+                    "id": 1498,
+                    "name": "Estadio de la Cerámica",
+                    "city": "Villarreal"
+                },
+                "status": {
+                    "long": "Match Finished",
+                    "short": "FT",
+                    "elapsed": 90
+                }
+            },
+            "league": {
+                "id": 140,
+                "name": "La Liga",
+                "country": "Spain",
+                "logo": "https://media.api-sports.io/football/leagues/140.png",
+                "flag": "https://media.api-sports.io/flags/es.svg",
+                "season": 2021,
+                "round": "Regular Season - 28"
+            },
+            "teams": {
+                "home": {
+                    "id": 533,
+                    "name": "Villarreal",
+                    "logo": "https://media.api-sports.io/football/teams/533.png",
+                    "winner": true
+                },
+                "away": {
+                    "id": 538,
+                    "name": "Celta Vigo",
+                    "logo": "https://media.api-sports.io/football/teams/538.png",
+                    "winner": false
+                }
+            },
+            "goals": {
+                "home": 1,
+                "away": 0
+            },
+            "score": {
+                "halftime": {
+                    "home": 0,
+                    "away": 0
+                },
+                "fulltime": {
+                    "home": 1,
+                    "away": 0
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,455 @@
+
+{
+    "get": "fixtures/events",
+    "parameters": {
+        "fixture": "720979"
+    },
+    "errors": [],
+    "results": 20,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "time": {
+                "elapsed": 5,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 47282,
+                "name": "Raúl García"
+            },
+            "assist": {
+                "id": null,
+                "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+        },
+        {
+            "time": {
+                "elapsed": 29,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 30510,
+                "name": "Álex Berenguer"
+            },
+            "assist": {
+                "id": null,
+                "name": null
+            },
+            "type": "Var",
+            "detail": "Penalty awarded",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 30,
+                "extra": null
+            },
+            "team": {
+                "id": 548,
+                "name": "Real Sociedad",
+                "logo": "https://media.api-sports.io/football/teams/548.png"
+            },
+            "player": {
+                "id": 634,
+                "name": "David Silva"
+            },
+            "assist": {
+                "id": null,
+                "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Handball"
+        },
+        {
+            "time": {
+                "elapsed": 37,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 2670,
+                "name": "Iñigo Martínez"
+            },
+            "assist": {
+                "id": null,
+                "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Handball"
+        },
+        {
+            "time": {
+                "elapsed": 55,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 47281,
+                "name": "Dani García"
+            },
+            "assist": {
+                "id": null,
+                "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+        },
+        {
+            "time": {
+                "elapsed": 62,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 47418,
+                "name": "Mikel Vesga"
+            },
+            "assist": {
+                "id": 182639,
+                "name": "Unai Vencedor"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 62,
+                "extra": null
+            },
+            "team": {
+                "id": 548,
+                "name": "Real Sociedad",
+                "logo": "https://media.api-sports.io/football/teams/548.png"
+            },
+            "player": {
+                "id": 634,
+                "name": "David Silva"
+            },
+            "assist": {
+                "id": 142,
+                "name": "Rafinha"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 62,
+                "extra": null
+            },
+            "team": {
+                "id": 548,
+                "name": "Real Sociedad",
+                "logo": "https://media.api-sports.io/football/teams/548.png"
+            },
+            "player": {
+                "id": 47311,
+                "name": "Mikel Merino"
+            },
+            "assist": {
+                "id": 104821,
+                "name": "Jon Guridi"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 63,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 47282,
+                "name": "Raúl García"
+            },
+            "assist": {
+                "id": 128398,
+                "name": "Oihan Sancet"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 68,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 47278,
+                "name": "Dani Vivian"
+            },
+            "assist": {
+                "id": 30510,
+                "name": "Álex Berenguer"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 72,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 128398,
+                "name": "Oihan Sancet"
+            },
+            "assist": {
+                "id": 2672,
+                "name": "Muniain"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 73,
+                "extra": null
+            },
+            "team": {
+                "id": 548,
+                "name": "Real Sociedad",
+                "logo": "https://media.api-sports.io/football/teams/548.png"
+            },
+            "player": {
+                "id": 8492,
+                "name": "A. Sørloth"
+            },
+            "assist": {
+                "id": 47308,
+                "name": "N. Djouahra"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 73,
+                "extra": null
+            },
+            "team": {
+                "id": 548,
+                "name": "Real Sociedad",
+                "logo": "https://media.api-sports.io/football/teams/548.png"
+            },
+            "player": {
+                "id": 47520,
+                "name": "Portu"
+            },
+            "assist": {
+                "id": 183706,
+                "name": "Ander Martín"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 80,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 47294,
+                "name": "Williams"
+            },
+            "assist": {
+                "id": 30510,
+                "name": "Álex Berenguer"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 87,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 47294,
+                "name": "Williams"
+            },
+            "assist": {
+                "id": 104853,
+                "name": "Asier Villalibre"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 87,
+                "extra": null
+            },
+            "team": {
+                "id": 548,
+                "name": "Real Sociedad",
+                "logo": "https://media.api-sports.io/football/teams/548.png"
+            },
+            "player": {
+                "id": 47323,
+                "name": "Mikel Oyarzabal"
+            },
+            "assist": {
+                "id": 182602,
+                "name": "Julen Lobete"
+            },
+            "type": "subst",
+            "detail": "Substitution 5",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 89,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 2672,
+                "name": "Muniain"
+            },
+            "assist": {
+                "id": 128398,
+                "name": "Oihan Sancet"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 90,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 47273,
+                "name": "Yuri"
+            },
+            "assist": {
+                "id": 47272,
+                "name": "Balenziaga"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 90,
+                "extra": null
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 47275,
+                "name": "De Marcos"
+            },
+            "assist": {
+                "id": 182627,
+                "name": "Alex Petxarroman"
+            },
+            "type": "subst",
+            "detail": "Substitution 5",
+            "comments": null
+        },
+        {
+            "time": {
+                "elapsed": 90,
+                "extra": 4
+            },
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png"
+            },
+            "player": {
+                "id": 30510,
+                "name": "Álex Berenguer"
+            },
+            "assist": {
+                "id": null,
+                "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Time wasting"
+        }
+    ]
+}

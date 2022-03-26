@@ -1,0 +1,459 @@
+{
+    "get": "fixtures/lineups",
+    "parameters": {
+        "fixture": "720979"
+    },
+    "errors": [],
+    "results": 2,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "team": {
+                "id": 531,
+                "name": "Athletic Club",
+                "logo": "https://media.api-sports.io/football/teams/531.png",
+                "colors": {
+                    "player": {
+                        "primary": "e51010",
+                        "number": "ffffff",
+                        "border": "00a3f5"
+                    },
+                    "goalkeeper": {
+                        "primary": "00a3f5",
+                        "number": "ffffff",
+                        "border": "00a3f5"
+                    }
+                }
+            },
+            "coach": {
+                "id": 1585,
+                "name": "Marcelino",
+                "photo": "https://media.api-sports.io/football/coachs/1585.png"
+            },
+            "formation": "4-4-2",
+            "startXI": [
+                {
+                    "player": {
+                        "id": 47270,
+                        "name": "Unai Simón",
+                        "number": 1,
+                        "pos": "G",
+                        "grid": "1:1"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47275,
+                        "name": "De Marcos",
+                        "number": 18,
+                        "pos": "D",
+                        "grid": "2:4"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47273,
+                        "name": "Yuri",
+                        "number": 17,
+                        "pos": "D",
+                        "grid": "2:3"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 2670,
+                        "name": "Íñigo Martínez",
+                        "number": 4,
+                        "pos": "D",
+                        "grid": "2:2"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47278,
+                        "name": "Dani Vivian",
+                        "number": 12,
+                        "pos": "D",
+                        "grid": "2:1"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47282,
+                        "name": "Raúl García",
+                        "number": 22,
+                        "pos": "F",
+                        "grid": "3:4"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47281,
+                        "name": "Dani García",
+                        "number": 14,
+                        "pos": "M",
+                        "grid": "3:3"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47418,
+                        "name": "Mikel Vesga",
+                        "number": 6,
+                        "pos": "M",
+                        "grid": "3:2"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 2672,
+                        "name": "Muniain",
+                        "number": 10,
+                        "pos": "M",
+                        "grid": "3:1"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47294,
+                        "name": "Williams",
+                        "number": 9,
+                        "pos": "F",
+                        "grid": "4:2"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 30510,
+                        "name": "Álex Berenguer",
+                        "number": 7,
+                        "pos": "M",
+                        "grid": "4:1"
+                    }
+                }
+            ],
+            "substitutes": [
+                {
+                    "player": {
+                        "id": 182639,
+                        "name": "Unai Vencedor",
+                        "number": 16,
+                        "pos": "M",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 128398,
+                        "name": "Oihan Sancet",
+                        "number": 8,
+                        "pos": "M",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 104853,
+                        "name": "Asier Villalibre",
+                        "number": 20,
+                        "pos": "F",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 182627,
+                        "name": "Alex Petxarroman",
+                        "number": 2,
+                        "pos": "D",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47272,
+                        "name": "Balenziaga",
+                        "number": 24,
+                        "pos": "D",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 125,
+                        "name": "Jokin Ezkieta",
+                        "number": 13,
+                        "pos": "G",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47271,
+                        "name": "Yeray",
+                        "number": 5,
+                        "pos": "D",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47276,
+                        "name": "Lekue",
+                        "number": 15,
+                        "pos": "D",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 286593,
+                        "name": "Nico Serrano",
+                        "number": 33,
+                        "pos": "F",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47277,
+                        "name": "Unai Núñez",
+                        "number": 3,
+                        "pos": "D",
+                        "grid": null
+                    }
+                }
+            ]
+        },
+        {
+            "team": {
+                "id": 548,
+                "name": "Real Sociedad",
+                "logo": "https://media.api-sports.io/football/teams/548.png",
+                "colors": {
+                    "player": {
+                        "primary": "0080ff",
+                        "number": "000000",
+                        "border": "070707"
+                    },
+                    "goalkeeper": {
+                        "primary": "070707",
+                        "number": "ffffff",
+                        "border": "070707"
+                    }
+                }
+            },
+            "coach": {
+                "id": 1586,
+                "name": "Imanol Alguacil",
+                "photo": "https://media.api-sports.io/football/coachs/1586.png"
+            },
+            "formation": "4-2-3-1",
+            "startXI": [
+                {
+                    "player": {
+                        "id": 47269,
+                        "name": "Álex Remiro",
+                        "number": 1,
+                        "pos": "G",
+                        "grid": "1:1"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47299,
+                        "name": "Gorosabel",
+                        "number": 18,
+                        "pos": "D",
+                        "grid": "2:4"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47301,
+                        "name": "R. Le Normand",
+                        "number": 24,
+                        "pos": "D",
+                        "grid": "2:3"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47303,
+                        "name": "Aihen Muñoz",
+                        "number": 12,
+                        "pos": "D",
+                        "grid": "2:2"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 634,
+                        "name": "David Silva",
+                        "number": 21,
+                        "pos": "M",
+                        "grid": "2:1"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47311,
+                        "name": "Mikel Merino",
+                        "number": 8,
+                        "pos": "M",
+                        "grid": "3:2"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47314,
+                        "name": "Zubeldía",
+                        "number": 5,
+                        "pos": "D",
+                        "grid": "3:1"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47315,
+                        "name": "Martín Zubimendi",
+                        "number": 3,
+                        "pos": "M",
+                        "grid": "4:3"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47520,
+                        "name": "Portu",
+                        "number": 7,
+                        "pos": "M",
+                        "grid": "4:2"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 8492,
+                        "name": "A. Sørloth",
+                        "number": 23,
+                        "pos": "F",
+                        "grid": "4:1"
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47323,
+                        "name": "Mikel Oyarzabal",
+                        "number": 10,
+                        "pos": "M",
+                        "grid": "5:1"
+                    }
+                }
+            ],
+            "substitutes": [
+                {
+                    "player": {
+                        "id": 104821,
+                        "name": "Jon Guridi",
+                        "number": 14,
+                        "pos": "M",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 142,
+                        "name": "Rafinha",
+                        "number": 17,
+                        "pos": "M",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47308,
+                        "name": "N. Djouahra",
+                        "number": 37,
+                        "pos": "M",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 183706,
+                        "name": "Ander Martín",
+                        "number": 47,
+                        "pos": "F",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 182602,
+                        "name": "Julen Lobete",
+                        "number": 35,
+                        "pos": "F",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47310,
+                        "name": "Illarramendi",
+                        "number": 4,
+                        "pos": "M",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 2741,
+                        "name": "M. Ryan",
+                        "number": 13,
+                        "pos": "G",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47298,
+                        "name": "Elustondo",
+                        "number": 6,
+                        "pos": "D",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47309,
+                        "name": "Guevara",
+                        "number": 16,
+                        "pos": "M",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 182546,
+                        "name": "Jon Pacheco",
+                        "number": 26,
+                        "pos": "D",
+                        "grid": null
+                    }
+                },
+                {
+                    "player": {
+                        "id": 47307,
+                        "name": "Zaldúa",
+                        "number": 2,
+                        "pos": "D",
+                        "grid": null
+                    }
+                }
+            ]
+        }
+    ]
+}
