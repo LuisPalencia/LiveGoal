@@ -28,7 +28,7 @@ import SwiftUI
 struct DetailPlayerView: View {
 
     //@StateObject var viewModel = DetailPlayerViewModel()
-    var viewModel: ResponseDetailPlayer = DetailPlayerServerModel.stubbedPlayer
+    var viewModel: PlayerDetail = DetailPlayerServerModel.stubbedPlayer
     
     var body: some View {
         ZStack{

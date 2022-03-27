@@ -66,7 +66,7 @@ struct LeagueClassificationView: View {
                             label: {
                                 StandingTeamItem(model: standing)
                                     .padding(.bottom, 0)
-                                    .background((standing.rank! % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.2))
+                                    .background((standing.rank! % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.1))
                             })
                             .buttonStyle(PlainButtonStyle())
                         

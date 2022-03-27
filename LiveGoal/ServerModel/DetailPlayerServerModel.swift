@@ -14,7 +14,7 @@ struct DetailPlayerServerModel: Codable {
     let errors: [JSONAny]?
     let results: Int?
     let paging: Paging?
-    let response: [ResponseDetailPlayer]?
+    let response: [PlayerDetail]?
 
     enum CodingKeys: String, CodingKey {
         case detailPlayerServerModelGet = "get"
@@ -27,7 +27,7 @@ struct DetailPlayerServerModel: Codable {
 }
 
 // MARK: - Response
-struct ResponseDetailPlayer: Codable {
+struct PlayerDetail: Codable {
     let player: Player?
     let statistics: [PlayerStatistic]?
 
@@ -137,7 +137,7 @@ struct CardsPlayer: Codable {
 struct DribblesPlayer: Codable {
     let attempts: Int?
     let success: Int?
-    let past: JSONNull?
+    let past: Int?
 
     enum CodingKeys: String, CodingKey {
         case attempts = "attempts"
@@ -148,8 +148,8 @@ struct DribblesPlayer: Codable {
 
 // MARK: - Duels
 struct DuelsPlayer: Codable {
-    let total: JSONNull?
-    let won: JSONNull?
+    let total: Int?
+    let won: Int?
 
     enum CodingKeys: String, CodingKey {
         case total = "total"
@@ -273,7 +273,7 @@ struct TacklesPlayer: Codable {
 
 extension DetailPlayerServerModel {
     
-    static var stubbedPlayer: ResponseDetailPlayer {
+    static var stubbedPlayer: PlayerDetail {
         let results: DetailPlayerServerModel? = try? Bundle.main.loadAndDecodeJSON(filename: "DetailPlayer")
         return (results?.response?[0])!
     }

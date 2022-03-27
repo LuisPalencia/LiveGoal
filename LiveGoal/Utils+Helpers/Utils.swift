@@ -99,6 +99,14 @@ struct URLEnpoint {
     static let endpointMatchEvents = "fixtures/events?fixture=%@"
     // Endpoint of match lineups
     static let endpointMatchLineups = "fixtures/lineups?fixture=%@"
+    // Endpoint of top player scorers
+    static let endpointTopPlayerScorers = "players/topscorers?season=%@&league=%@"
+    // Endpoint of top player scorers
+    static let endpointTopPlayerAssists = "players/topassists?season=%@&league=%@"
+    // Endpoint of top player scorers
+    static let endpointTopPlayerYellowCards = "players/topyellowcards?season=%@&league=%@"
+    // Endpoint of top player scorers
+    static let endpointTopPlayerRedCards = "players/topredcards?season=%@&league=%@"
 }
 
 extension URLEnpoint {

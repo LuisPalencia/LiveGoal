@@ -34,7 +34,7 @@ struct HomeView: View {
         case .games:
             LeagueRoundsCoordinator.navigation()
         case .top:
-            LeagueClassificationCoordinator.navigation()
+            RankingsCoordinator.navigation()
         case .favourites:
             LeagueClassificationCoordinator.navigation()
         case .profile:

@@ -1,0 +1,1915 @@
+{
+    "get": "players/topscorers",
+    "parameters": {
+        "league": "140",
+        "season": "2021"
+    },
+    "errors": [],
+    "results": 20,
+    "paging": {
+        "current": 0,
+        "total": 1
+    },
+    "response": [
+        {
+            "player": {
+                "id": 759,
+                "name": "K. Benzema",
+                "firstname": "Karim",
+                "lastname": "Benzema",
+                "age": 35,
+                "birth": {
+                    "date": "1987-12-19",
+                    "place": "Lyon",
+                    "country": "France"
+                },
+                "nationality": "France",
+                "height": "185 cm",
+                "weight": "81 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/759.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 541,
+                        "name": "Real Madrid",
+                        "logo": "https://media.api-sports.io/football/teams/541.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 25,
+                        "lineups": 25,
+                        "minutes": 2064,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.750000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 10,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": 71,
+                        "on": 45
+                    },
+                    "goals": {
+                        "total": 22,
+                        "conceded": 0,
+                        "assists": 11,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 902,
+                        "key": 49,
+                        "accuracy": 32
+                    },
+                    "tackles": {
+                        "total": 11,
+                        "blocks": null,
+                        "interceptions": 4
+                    },
+                    "duels": {
+                        "total": 126,
+                        "won": 56
+                    },
+                    "dribbles": {
+                        "attempts": 33,
+                        "success": 24,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 5,
+                        "committed": 12
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 5,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 762,
+                "name": "Vinícius José Paixão de Oliveira Júnior",
+                "firstname": "Vinícius José",
+                "lastname": "Paixão de Oliveira Júnior",
+                "age": 22,
+                "birth": {
+                    "date": "2000-07-12",
+                    "place": "São Gonçalo",
+                    "country": "Brazil"
+                },
+                "nationality": "Brazil",
+                "height": "176 cm",
+                "weight": "73 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/762.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 541,
+                        "name": "Real Madrid",
+                        "logo": "https://media.api-sports.io/football/teams/541.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 27,
+                        "lineups": 25,
+                        "minutes": 2212,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.370370",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 14,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 50,
+                        "on": 35
+                    },
+                    "goals": {
+                        "total": 14,
+                        "conceded": 0,
+                        "assists": 6,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 1021,
+                        "key": 56,
+                        "accuracy": 32
+                    },
+                    "tackles": {
+                        "total": 39,
+                        "blocks": null,
+                        "interceptions": 4
+                    },
+                    "duels": {
+                        "total": 388,
+                        "won": 188
+                    },
+                    "dribbles": {
+                        "attempts": 172,
+                        "success": 80,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 66,
+                        "committed": 24
+                    },
+                    "cards": {
+                        "yellow": 6,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 47499,
+                "name": "Enes Ünal",
+                "firstname": "Enes",
+                "lastname": "Ünal",
+                "age": 25,
+                "birth": {
+                    "date": "1997-05-10",
+                    "place": "Bursa",
+                    "country": "Turkey"
+                },
+                "nationality": "Turkey",
+                "height": "187 cm",
+                "weight": "78 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/47499.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 546,
+                        "name": "Getafe",
+                        "logo": "https://media.api-sports.io/football/teams/546.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 28,
+                        "lineups": 24,
+                        "minutes": 2010,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.007407",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 4,
+                        "out": 17,
+                        "bench": 4
+                    },
+                    "shots": {
+                        "total": 47,
+                        "on": 23
+                    },
+                    "goals": {
+                        "total": 14,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 446,
+                        "key": 20,
+                        "accuracy": 10
+                    },
+                    "tackles": {
+                        "total": 30,
+                        "blocks": 3,
+                        "interceptions": 3
+                    },
+                    "duels": {
+                        "total": 449,
+                        "won": 193
+                    },
+                    "dribbles": {
+                        "attempts": 36,
+                        "success": 18,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 50,
+                        "committed": 56
+                    },
+                    "cards": {
+                        "yellow": 7,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 2,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 47551,
+                "name": "Raúl de Tomás Gómez",
+                "firstname": "Raúl",
+                "lastname": "de Tomás Gómez",
+                "age": 28,
+                "birth": {
+                    "date": "1994-10-17",
+                    "place": "Madrid",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "180 cm",
+                "weight": "72 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/47551.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 540,
+                        "name": "Espanyol",
+                        "logo": "https://media.api-sports.io/football/teams/540.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 27,
+                        "lineups": 27,
+                        "minutes": 2382,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.161538",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 9,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": 73,
+                        "on": 39
+                    },
+                    "goals": {
+                        "total": 14,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 541,
+                        "key": 20,
+                        "accuracy": 17
+                    },
+                    "tackles": {
+                        "total": 13,
+                        "blocks": 2,
+                        "interceptions": 6
+                    },
+                    "duels": {
+                        "total": 260,
+                        "won": 125
+                    },
+                    "dribbles": {
+                        "attempts": 63,
+                        "success": 45,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 40,
+                        "committed": 32
+                    },
+                    "cards": {
+                        "yellow": 5,
+                        "yellowred": 1,
+                        "red": 1
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 4,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 47445,
+                "name": "Iago Aspas Juncal",
+                "firstname": "Iago",
+                "lastname": "Aspas Juncal",
+                "age": 35,
+                "birth": {
+                    "date": "1987-08-01",
+                    "place": "Moaña",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "176 cm",
+                "weight": "67 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/47445.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 538,
+                        "name": "Celta Vigo",
+                        "logo": "https://media.api-sports.io/football/teams/538.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 28,
+                        "lineups": 27,
+                        "minutes": 2308,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.369230",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 8,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 39,
+                        "on": 21
+                    },
+                    "goals": {
+                        "total": 13,
+                        "conceded": 0,
+                        "assists": 4,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 847,
+                        "key": 45,
+                        "accuracy": 24
+                    },
+                    "tackles": {
+                        "total": 12,
+                        "blocks": 2,
+                        "interceptions": 8
+                    },
+                    "duels": {
+                        "total": 190,
+                        "won": 106
+                    },
+                    "dribbles": {
+                        "attempts": 62,
+                        "success": 41,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 39,
+                        "committed": 16
+                    },
+                    "cards": {
+                        "yellow": 8,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 2,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 47320,
+                "name": "Juan Miguel Jiménez López",
+                "firstname": "Juan Miguel",
+                "lastname": "Jiménez López",
+                "age": 29,
+                "birth": {
+                    "date": "1993-05-20",
+                    "place": "Coín",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "172 cm",
+                "weight": "69 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/47320.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 543,
+                        "name": "Real Betis",
+                        "logo": "https://media.api-sports.io/football/teams/543.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 24,
+                        "lineups": 19,
+                        "minutes": 1543,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.017391",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 5,
+                        "out": 17,
+                        "bench": 8
+                    },
+                    "shots": {
+                        "total": 33,
+                        "on": 21
+                    },
+                    "goals": {
+                        "total": 12,
+                        "conceded": 0,
+                        "assists": 1,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 310,
+                        "key": 12,
+                        "accuracy": 10
+                    },
+                    "tackles": {
+                        "total": 26,
+                        "blocks": 1,
+                        "interceptions": 6
+                    },
+                    "duels": {
+                        "total": 167,
+                        "won": 73
+                    },
+                    "dribbles": {
+                        "attempts": 28,
+                        "success": 19,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 9,
+                        "committed": 30
+                    },
+                    "cards": {
+                        "yellow": 5,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 18907,
+                "name": "José Luis Sanmartín Mato",
+                "firstname": "José Luis",
+                "lastname": "Sanmartín Mato",
+                "age": 32,
+                "birth": {
+                    "date": "1990-03-27",
+                    "place": "Stuttgart",
+                    "country": "Germany"
+                },
+                "nationality": "Spain",
+                "height": "192 cm",
+                "weight": "80 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/18907.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 542,
+                        "name": "Alaves",
+                        "logo": "https://media.api-sports.io/football/teams/542.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 29,
+                        "lineups": 27,
+                        "minutes": 2405,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.157142",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 5,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 45,
+                        "on": 27
+                    },
+                    "goals": {
+                        "total": 12,
+                        "conceded": 0,
+                        "assists": 2,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 798,
+                        "key": 23,
+                        "accuracy": 17
+                    },
+                    "tackles": {
+                        "total": 12,
+                        "blocks": 3,
+                        "interceptions": 7
+                    },
+                    "duels": {
+                        "total": 488,
+                        "won": 289
+                    },
+                    "dribbles": {
+                        "attempts": 39,
+                        "success": 13,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 42,
+                        "committed": 38
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 5,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 53,
+                "name": "Ángel Martín Correa",
+                "firstname": "Ángel Martín",
+                "lastname": "Correa",
+                "age": 27,
+                "birth": {
+                    "date": "1995-03-09",
+                    "place": "Rosario",
+                    "country": "Argentina"
+                },
+                "nationality": "Argentina",
+                "height": "171 cm",
+                "weight": "70 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/53.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 530,
+                        "name": "Atletico Madrid",
+                        "logo": "https://media.api-sports.io/football/teams/530.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 29,
+                        "lineups": 18,
+                        "minutes": 1558,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.867857",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 11,
+                        "out": 13,
+                        "bench": 11
+                    },
+                    "shots": {
+                        "total": 26,
+                        "on": 18
+                    },
+                    "goals": {
+                        "total": 11,
+                        "conceded": 0,
+                        "assists": 5,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 475,
+                        "key": 18,
+                        "accuracy": 13
+                    },
+                    "tackles": {
+                        "total": 14,
+                        "blocks": 2,
+                        "interceptions": 10
+                    },
+                    "duels": {
+                        "total": 164,
+                        "won": 63
+                    },
+                    "dribbles": {
+                        "attempts": 42,
+                        "success": 25,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 22,
+                        "committed": 18
+                    },
+                    "cards": {
+                        "yellow": 3,
+                        "yellowred": 0,
+                        "red": 1
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 925,
+                "name": "Gonçalo Manuel Ganchinho Guedes",
+                "firstname": "Gonçalo Manuel",
+                "lastname": "Ganchinho Guedes",
+                "age": 26,
+                "birth": {
+                    "date": "1996-11-29",
+                    "place": "Benavente",
+                    "country": "Portugal"
+                },
+                "nationality": "Portugal",
+                "height": "179 cm",
+                "weight": "68 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/925.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 532,
+                        "name": "Valencia",
+                        "logo": "https://media.api-sports.io/football/teams/532.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 28,
+                        "lineups": 26,
+                        "minutes": 2190,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.189285",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 14,
+                        "bench": 3
+                    },
+                    "shots": {
+                        "total": 44,
+                        "on": 27
+                    },
+                    "goals": {
+                        "total": 11,
+                        "conceded": 0,
+                        "assists": 5,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 619,
+                        "key": 35,
+                        "accuracy": 15
+                    },
+                    "tackles": {
+                        "total": 20,
+                        "blocks": null,
+                        "interceptions": 8
+                    },
+                    "duels": {
+                        "total": 301,
+                        "won": 147
+                    },
+                    "dribbles": {
+                        "attempts": 102,
+                        "success": 50,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 61,
+                        "committed": 30
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 1,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 667,
+                "name": "Memphis Depay",
+                "firstname": "Memphis",
+                "lastname": "Depay",
+                "age": 28,
+                "birth": {
+                    "date": "1994-02-13",
+                    "place": "Moordrecht",
+                    "country": "Netherlands"
+                },
+                "nationality": "Netherlands",
+                "height": "176 cm",
+                "weight": "78 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/667.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 529,
+                        "name": "Barcelona",
+                        "logo": "https://media.api-sports.io/football/teams/529.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 20,
+                        "lineups": 15,
+                        "minutes": 1438,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.277777",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 5,
+                        "out": 1,
+                        "bench": 5
+                    },
+                    "shots": {
+                        "total": 39,
+                        "on": 28
+                    },
+                    "goals": {
+                        "total": 10,
+                        "conceded": 0,
+                        "assists": 2,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 590,
+                        "key": 31,
+                        "accuracy": 26
+                    },
+                    "tackles": {
+                        "total": 5,
+                        "blocks": 1,
+                        "interceptions": 2
+                    },
+                    "duels": {
+                        "total": 153,
+                        "won": 75
+                    },
+                    "dribbles": {
+                        "attempts": 51,
+                        "success": 30,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 35,
+                        "committed": 16
+                    },
+                    "cards": {
+                        "yellow": 3,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 4,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 157,
+                "name": "L. Suárez",
+                "firstname": "Luis Alberto",
+                "lastname": "Suárez Díaz",
+                "age": 35,
+                "birth": {
+                    "date": "1987-01-24",
+                    "place": "Salto",
+                    "country": "Uruguay"
+                },
+                "nationality": "Uruguay",
+                "height": "182 cm",
+                "weight": "86 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/157.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 530,
+                        "name": "Atletico Madrid",
+                        "logo": "https://media.api-sports.io/football/teams/530.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 28,
+                        "lineups": 17,
+                        "minutes": 1550,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.859259",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 11,
+                        "out": 12,
+                        "bench": 11
+                    },
+                    "shots": {
+                        "total": 37,
+                        "on": 21
+                    },
+                    "goals": {
+                        "total": 9,
+                        "conceded": 0,
+                        "assists": 2,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 382,
+                        "key": 11,
+                        "accuracy": 10
+                    },
+                    "tackles": {
+                        "total": 4,
+                        "blocks": 1,
+                        "interceptions": 1
+                    },
+                    "duels": {
+                        "total": 105,
+                        "won": 42
+                    },
+                    "dribbles": {
+                        "attempts": 17,
+                        "success": 6,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 19,
+                        "committed": 17
+                    },
+                    "cards": {
+                        "yellow": 7,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 1,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 47323,
+                "name": "Mikel Oyarzabal Ugarte",
+                "firstname": "Mikel",
+                "lastname": "Oyarzabal Ugarte",
+                "age": 25,
+                "birth": {
+                    "date": "1997-04-21",
+                    "place": "Eibar",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "181 cm",
+                "weight": "78 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/47323.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 548,
+                        "name": "Real Sociedad",
+                        "logo": "https://media.api-sports.io/football/teams/548.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 22,
+                        "lineups": 19,
+                        "minutes": 1673,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.052380",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 3,
+                        "out": 7,
+                        "bench": 3
+                    },
+                    "shots": {
+                        "total": 29,
+                        "on": 18
+                    },
+                    "goals": {
+                        "total": 9,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 503,
+                        "key": 38,
+                        "accuracy": 17
+                    },
+                    "tackles": {
+                        "total": 16,
+                        "blocks": 2,
+                        "interceptions": 10
+                    },
+                    "duels": {
+                        "total": 191,
+                        "won": 84
+                    },
+                    "dribbles": {
+                        "attempts": 41,
+                        "success": 22,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 25,
+                        "committed": 14
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 1
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 4,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 930,
+                "name": "Carlos Soler",
+                "firstname": "Carlos",
+                "lastname": "Soler Barragán",
+                "age": 25,
+                "birth": {
+                    "date": "1997-01-02",
+                    "place": "Valencia",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "180 cm",
+                "weight": "76 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/930.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 532,
+                        "name": "Valencia",
+                        "logo": "https://media.api-sports.io/football/teams/532.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 23,
+                        "lineups": 20,
+                        "minutes": 1790,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.165217",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 3,
+                        "out": 8,
+                        "bench": 3
+                    },
+                    "shots": {
+                        "total": 31,
+                        "on": 17
+                    },
+                    "goals": {
+                        "total": 9,
+                        "conceded": 0,
+                        "assists": 5,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 522,
+                        "key": 40,
+                        "accuracy": 16
+                    },
+                    "tackles": {
+                        "total": 26,
+                        "blocks": 2,
+                        "interceptions": 11
+                    },
+                    "duels": {
+                        "total": 159,
+                        "won": 80
+                    },
+                    "dribbles": {
+                        "attempts": 30,
+                        "success": 14,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 32,
+                        "committed": 16
+                    },
+                    "cards": {
+                        "yellow": 4,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 6,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 47013,
+                "name": "Rafael Mir Vicente",
+                "firstname": "Rafael",
+                "lastname": "Mir Vicente",
+                "age": 25,
+                "birth": {
+                    "date": "1997-06-18",
+                    "place": "Murcia",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "191 cm",
+                "weight": "86 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/47013.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 536,
+                        "name": "Sevilla",
+                        "logo": "https://media.api-sports.io/football/teams/536.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 26,
+                        "lineups": 17,
+                        "minutes": 1571,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.650000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 9,
+                        "out": 8,
+                        "bench": 9
+                    },
+                    "shots": {
+                        "total": 42,
+                        "on": 18
+                    },
+                    "goals": {
+                        "total": 8,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 273,
+                        "key": 6,
+                        "accuracy": 7
+                    },
+                    "tackles": {
+                        "total": 4,
+                        "blocks": 3,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": 175,
+                        "won": 76
+                    },
+                    "dribbles": {
+                        "attempts": 17,
+                        "success": 8,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 14,
+                        "committed": 26
+                    },
+                    "cards": {
+                        "yellow": 3,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 746,
+                "name": "Marco Asensio Willemsen",
+                "firstname": "Marco",
+                "lastname": "Asensio Willemsen",
+                "age": 26,
+                "birth": {
+                    "date": "1996-01-21",
+                    "place": "Palma de Mallorca",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "182 cm",
+                "weight": "76 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/746.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 541,
+                        "name": "Real Madrid",
+                        "logo": "https://media.api-sports.io/football/teams/541.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 24,
+                        "lineups": 14,
+                        "minutes": 1292,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.090909",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 10,
+                        "out": 11,
+                        "bench": 11
+                    },
+                    "shots": {
+                        "total": 37,
+                        "on": 27
+                    },
+                    "goals": {
+                        "total": 8,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 561,
+                        "key": 21,
+                        "accuracy": 22
+                    },
+                    "tackles": {
+                        "total": 6,
+                        "blocks": 1,
+                        "interceptions": 9
+                    },
+                    "duels": {
+                        "total": 89,
+                        "won": 38
+                    },
+                    "dribbles": {
+                        "attempts": 21,
+                        "success": 16,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 16,
+                        "committed": 7
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 1707,
+                "name": "Gerard Moreno Balagueró",
+                "firstname": "Gerard",
+                "lastname": "Moreno Balagueró",
+                "age": 30,
+                "birth": {
+                    "date": "1992-04-07",
+                    "place": "Santa Perpètua de Mogoda",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "180 cm",
+                "weight": "77 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/1707.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 533,
+                        "name": "Villarreal",
+                        "logo": "https://media.api-sports.io/football/teams/533.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 14,
+                        "lineups": 12,
+                        "minutes": 1013,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.230769",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 4,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 24,
+                        "on": 14
+                    },
+                    "goals": {
+                        "total": 8,
+                        "conceded": 0,
+                        "assists": 2,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 328,
+                        "key": 22,
+                        "accuracy": 17
+                    },
+                    "tackles": {
+                        "total": 3,
+                        "blocks": 1,
+                        "interceptions": 5
+                    },
+                    "duels": {
+                        "total": 124,
+                        "won": 59
+                    },
+                    "dribbles": {
+                        "attempts": 44,
+                        "success": 27,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 12,
+                        "committed": 10
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 1,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 83,
+                "name": "Arnaut Danjuma Adam Groeneveld",
+                "firstname": "Arnaut Danjuma Adam",
+                "lastname": "Groeneveld",
+                "age": 25,
+                "birth": {
+                    "date": "1997-01-31",
+                    "place": "Lagos",
+                    "country": "Nigeria"
+                },
+                "nationality": "Netherlands",
+                "height": "178 cm",
+                "weight": "74 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/83.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 533,
+                        "name": "Villarreal",
+                        "logo": "https://media.api-sports.io/football/teams/533.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 19,
+                        "lineups": 15,
+                        "minutes": 1271,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.888888",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 4,
+                        "out": 9,
+                        "bench": 4
+                    },
+                    "shots": {
+                        "total": 37,
+                        "on": 21
+                    },
+                    "goals": {
+                        "total": 8,
+                        "conceded": 0,
+                        "assists": 2,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 283,
+                        "key": 8,
+                        "accuracy": 12
+                    },
+                    "tackles": {
+                        "total": 4,
+                        "blocks": null,
+                        "interceptions": 2
+                    },
+                    "duels": {
+                        "total": 98,
+                        "won": 46
+                    },
+                    "dribbles": {
+                        "attempts": 52,
+                        "success": 27,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 13,
+                        "committed": 3
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 2,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 47348,
+                "name": "Borja Iglesias Quintas",
+                "firstname": "Borja",
+                "lastname": "Iglesias Quintas",
+                "age": 29,
+                "birth": {
+                    "date": "1993-01-17",
+                    "place": "Santiago de Compostela",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "187 cm",
+                "weight": "86 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/47348.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 543,
+                        "name": "Real Betis",
+                        "logo": "https://media.api-sports.io/football/teams/543.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 25,
+                        "lineups": 14,
+                        "minutes": 1168,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.831818",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 11,
+                        "out": 13,
+                        "bench": 15
+                    },
+                    "shots": {
+                        "total": 25,
+                        "on": 16
+                    },
+                    "goals": {
+                        "total": 8,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 226,
+                        "key": 10,
+                        "accuracy": 7
+                    },
+                    "tackles": {
+                        "total": 2,
+                        "blocks": 1,
+                        "interceptions": 1
+                    },
+                    "duels": {
+                        "total": 125,
+                        "won": 45
+                    },
+                    "dribbles": {
+                        "attempts": 20,
+                        "success": 6,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 22,
+                        "committed": 21
+                    },
+                    "cards": {
+                        "yellow": 4,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 2,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 47265,
+                "name": "Jorge Molina Vidal",
+                "firstname": "Jorge",
+                "lastname": "Molina Vidal",
+                "age": 40,
+                "birth": {
+                    "date": "1982-04-22",
+                    "place": "Alcoy",
+                    "country": "Spain"
+                },
+                "nationality": "Spain",
+                "height": "188 cm",
+                "weight": "72 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/47265.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 715,
+                        "name": "Granada CF",
+                        "logo": "https://media.api-sports.io/football/teams/715.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 27,
+                        "lineups": 14,
+                        "minutes": 1471,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.916666",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 13,
+                        "out": 7,
+                        "bench": 15
+                    },
+                    "shots": {
+                        "total": 22,
+                        "on": 14
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": 4,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 334,
+                        "key": 19,
+                        "accuracy": 9
+                    },
+                    "tackles": {
+                        "total": 3,
+                        "blocks": 2,
+                        "interceptions": 6
+                    },
+                    "duels": {
+                        "total": 179,
+                        "won": 78
+                    },
+                    "dribbles": {
+                        "attempts": 5,
+                        "success": 1,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 30,
+                        "committed": 8
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 47237,
+                "name": "Luis Javier Suárez Charris",
+                "firstname": "Luis Javier",
+                "lastname": "Suárez Charris",
+                "age": 25,
+                "birth": {
+                    "date": "1997-12-02",
+                    "place": "Santa Marta",
+                    "country": "Colombia"
+                },
+                "nationality": "Colombia",
+                "height": "185 cm",
+                "weight": "74 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/47237.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 715,
+                        "name": "Granada CF",
+                        "logo": "https://media.api-sports.io/football/teams/715.png"
+                    },
+                    "league": {
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
+                        "season": 2021
+                    },
+                    "games": {
+                        "appearences": 29,
+                        "lineups": 27,
+                        "minutes": 2316,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.873076",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 10,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 42,
+                        "on": 16
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 448,
+                        "key": 24,
+                        "accuracy": 11
+                    },
+                    "tackles": {
+                        "total": 16,
+                        "blocks": 3,
+                        "interceptions": 5
+                    },
+                    "duels": {
+                        "total": 293,
+                        "won": 110
+                    },
+                    "dribbles": {
+                        "attempts": 58,
+                        "success": 34,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 26,
+                        "committed": 28
+                    },
+                    "cards": {
+                        "yellow": 4,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        }
+    ]
+}
