@@ -31,6 +31,7 @@ protocol LeagueRoundsProviderInputProtocol: BaseProviderInputProtocol {
     func fetchDataCurrentSeasonLeagueProvider(idLeague: String)
     func fetchDataLeagueRoundsProvider(idLeague: Int, season: Int)
     func fetchDataLeagueAllMatchesProvider(idLeague: Int, season: Int)
+    func fetchDataCurrentLeagueRound(idLeague: Int, season: Int)
 }
 
 final class LeagueRoundsProvider: BaseProvider{
@@ -102,6 +103,24 @@ extension LeagueRoundsProvider: LeagueRoundsProviderInputProtocol{
             .store(in: &cancellable)
     }
     
+    func fetchDataCurrentLeagueRound(idLeague: Int, season: Int){
+        self.networkService.requestGeneric(payloadRequest: LeagueRoundsRequestDTO.requestDataGeneric(endpoint: URLEnpoint.endpointCurrentRoundSeason, season: String(season), idLeague:String(idLeague)), entityClass: CurrentRoundLeagueServerModel.self)
+            .sink { [weak self] completion in
+                guard self != nil else { return }
+                switch completion{
+                case .finished:
+                    debugPrint("finished")
+                case let .failure(error):
+                    print(error)
+                    self?.interactor?.setInformationCurrentLeagueRound(completion: .failure(error))
+                }
+            } receiveValue: { [weak self] resultData in
+                guard self != nil else { return }
+                self?.interactor?.setInformationCurrentLeagueRound(completion: .success(resultData))
+            }
+            .store(in: &cancellable)
+    }
+    
 }
 
 // MARK: - Request de apoyo
@@ -119,6 +138,15 @@ struct LeagueRoundsRequestDTO {
     static func requestDataMatchesAllSeason(season: String, idLeague: String) -> RequestDTO {
         let argument: [CVarArg] = [season, idLeague]
         let urlComplete = String(format: URLEnpoint.endpointMatchesAllSeason, arguments: argument)
+        var headers = URLEnpoint.headersAPI
+        headers["x-rapidapi-key"] = Obfuscator().reveal(key: Constants.Api.apiKey)
+        let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService, header: headers)
+        return request
+    }
+    
+    static func requestDataGeneric(endpoint: String, season: String, idLeague: String) -> RequestDTO {
+        let argument: [CVarArg] = [season, idLeague]
+        let urlComplete = String(format: endpoint, arguments: argument)
         var headers = URLEnpoint.headersAPI
         headers["x-rapidapi-key"] = Obfuscator().reveal(key: Constants.Api.apiKey)
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService, header: headers)

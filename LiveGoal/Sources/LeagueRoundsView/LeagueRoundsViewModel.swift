@@ -28,8 +28,9 @@ import Foundation
 // Output del Interactor
 protocol LeagueRoundsInteractorOutputProtocol: BaseInteractorOutputProtocol {
     func setInformationCurrentSeasonLeague(data: CurrentSeasonLeagueModelView?)
-    func setInformationCurrentLeagueRounds(data: [SeasonRoundsModelView]?)
-    func setInformationCurrentLeagueAllMatches(data: [Int: [MatchViewModel]]?)
+    func setInformationLeagueRounds(data: [SeasonRoundsModelView]?)
+    func setInformationLeagueAllMatches(data: [Int: [MatchViewModel]]?)
+    func setInformationCurrentLeagueRound(data: String)
 }
 
 final class LeagueRoundsViewModel: BaseViewModel, ObservableObject {
@@ -43,6 +44,7 @@ final class LeagueRoundsViewModel: BaseViewModel, ObservableObject {
     @Published var dataCurrentSeasonLeague: CurrentSeasonLeagueModelView?
     @Published var dataLeagueRounds: [Int] = []
     @Published var dataMatchesLeague: [Int: [MatchViewModel]] = [:]
+    @Published var dataCurrentLeagueRound: Int = 1
     
     var dataLeagueSeasonRounds: [SeasonRoundsModelView] = []
     
@@ -62,16 +64,19 @@ final class LeagueRoundsViewModel: BaseViewModel, ObservableObject {
 
 // Output del Interactor
 extension LeagueRoundsViewModel: LeagueRoundsInteractorOutputProtocol {
+    
     func setInformationCurrentSeasonLeague(data: CurrentSeasonLeagueModelView?) {
         guard let dataUnw = data else {
             return
         }
         self.dataCurrentSeasonLeague = dataUnw
+        
+        self.interactor?.fetchDataCurrentLeagueRound(idLeague: dataUnw.id ?? 0, season: dataUnw.year ?? 0)
         self.interactor?.fetchDataLeagueRoundsInteractor(idLeague: dataUnw.id ?? 0, season: dataUnw.year ?? 0)
         self.interactor?.fetchDataLeagueAllMatchesInteractor(idLeague: dataUnw.id ?? 0, season: dataUnw.year ?? 0)
     }
     
-    func setInformationCurrentLeagueRounds(data: [SeasonRoundsModelView]?) {
+    func setInformationLeagueRounds(data: [SeasonRoundsModelView]?) {
         self.dataLeagueSeasonRounds = data ?? []
         var rounds: [Int] = []
         for seasonRound in self.dataLeagueSeasonRounds {
@@ -82,8 +87,12 @@ extension LeagueRoundsViewModel: LeagueRoundsInteractorOutputProtocol {
         self.dataLeagueRounds.sort()
     }
     
-    func setInformationCurrentLeagueAllMatches(data: [Int: [MatchViewModel]]?) {
+    func setInformationLeagueAllMatches(data: [Int: [MatchViewModel]]?) {
         self.dataMatchesLeague = data ?? [:]
+    }
+    
+    func setInformationCurrentLeagueRound(data: String) {
+        self.dataCurrentLeagueRound = Utils.getRoundNumber(round: data)
     }
 }
 

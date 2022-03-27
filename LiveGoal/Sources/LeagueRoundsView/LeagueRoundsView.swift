@@ -36,6 +36,9 @@ struct LeagueRoundsView: View {
             HStack{
                 Text("Round \(roundSelected)")
                     .font(.title2).fontWeight(.bold)
+                    .onReceive(self.viewModel.$dataCurrentLeagueRound) { currentRound in
+                        self.roundSelected = currentRound
+                    }
                 Spacer()
                 Picker("Select round", selection: $roundSelected){
                     ForEach(self.viewModel.dataLeagueRounds, id: \.self){
@@ -59,11 +62,12 @@ struct LeagueRoundsView: View {
                     
                     if let matchesUnw = self.viewModel.getMatchesRoundSorted(round: roundSelected){
                         MatchesList(matches: matchesUnw)
-                    }else{
-                        Text("There are no matches for this round")
-                            .font(.title)
-                            .fontWeight(.bold)
                     }
+//                    else{
+//                        Text("There are no matches for this round")
+//                            .font(.title)
+//                            .fontWeight(.bold)
+//                    }
                     
                 }
             }

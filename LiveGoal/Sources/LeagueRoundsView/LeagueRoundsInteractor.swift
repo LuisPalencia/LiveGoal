@@ -30,6 +30,7 @@ protocol LeagueRoundsInteractorInputProtocol: BaseInteractorInputProtocol {
     func fetchDataCurrentSeasonLeagueInteractor(idLeague: String)
     func fetchDataLeagueRoundsInteractor(idLeague: Int, season: Int)
     func fetchDataLeagueAllMatchesInteractor(idLeague: Int, season: Int)
+    func fetchDataCurrentLeagueRound(idLeague: Int, season: Int)
 }
 
 // Output Provider
@@ -37,6 +38,7 @@ protocol LeagueRoundsProviderOutputProtocol: BaseProviderOutputProtocol {
     func setInformationCurrentSeasonLeague(completion: Result<LeagueServerModel?, NetworkError>)
     func setInformationLeagueRounds(completion: Result<SeasonRoundsServerModel?, NetworkError>)
     func setInformationLeagueAllMatches(completion: Result<TeamMatchesServerModel?, NetworkError>)
+    func setInformationCurrentLeagueRound(completion: Result<CurrentRoundLeagueServerModel?, NetworkError>)
 }
 
 
@@ -90,6 +92,7 @@ final class LeagueRoundsInteractor: BaseInteractor {
 
 // Input del Interactor
 extension LeagueRoundsInteractor: LeagueRoundsInteractorInputProtocol {
+    
     func fetchDataCurrentSeasonLeagueInteractor(idLeague: String) {
         self.provider?.fetchDataCurrentSeasonLeagueProvider(idLeague: idLeague)
     }
@@ -100,6 +103,10 @@ extension LeagueRoundsInteractor: LeagueRoundsInteractorInputProtocol {
     
     func fetchDataLeagueAllMatchesInteractor(idLeague: Int, season: Int) {
         self.provider?.fetchDataLeagueAllMatchesProvider(idLeague: idLeague, season: season)
+    }
+    
+    func fetchDataCurrentLeagueRound(idLeague: Int, season: Int) {
+        self.provider?.fetchDataCurrentLeagueRound(idLeague: idLeague, season: season)
     }
 }
 
@@ -117,7 +124,7 @@ extension LeagueRoundsInteractor: LeagueRoundsProviderOutputProtocol{
     func setInformationLeagueRounds(completion: Result<SeasonRoundsServerModel?, NetworkError>) {
         switch completion {
         case .success(let data):
-            self.viewModel?.setInformationCurrentLeagueRounds(data: self.transformSeasonRoundsToSeasonRoundsModelView(data: data))
+            self.viewModel?.setInformationLeagueRounds(data: self.transformSeasonRoundsToSeasonRoundsModelView(data: data))
         case .failure(let error):
             debugPrint(error)
         }
@@ -127,7 +134,22 @@ extension LeagueRoundsInteractor: LeagueRoundsProviderOutputProtocol{
         switch completion {
         case .success(let data):
             let matches = Utils.transformDataTeamMatchesToMatchModelView(data: data)
-            self.viewModel?.setInformationCurrentLeagueAllMatches(data: self.divideMatchesInRounds(data: matches))
+            self.viewModel?.setInformationLeagueAllMatches(data: self.divideMatchesInRounds(data: matches))
+        case .failure(let error):
+            debugPrint(error)
+        }
+    }
+    
+    func setInformationCurrentLeagueRound(completion: Result<CurrentRoundLeagueServerModel?, NetworkError>){
+        switch completion {
+        case .success(let data):
+            if let currentRoundUnw = data?.response {
+                if currentRoundUnw.count > 0 {
+                    self.viewModel?.setInformationCurrentLeagueRound(data: currentRoundUnw[0])
+                }
+            }
+            
+            
         case .failure(let error):
             debugPrint(error)
         }

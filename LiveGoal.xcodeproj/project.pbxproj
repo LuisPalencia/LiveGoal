@@ -104,6 +104,7 @@
 		0976AC8B27EF6BFE004DE39E /* TopPlayerScorers.json in Resources */ = {isa = PBXBuildFile; fileRef = 0976AC8A27EF6BFE004DE39E /* TopPlayerScorers.json */; };
 		0976AC8E27EF85FE004DE39E /* RankingPlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976AC8D27EF85FE004DE39E /* RankingPlayerList.swift */; };
 		0976AC9127EF8AFD004DE39E /* RankingTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976AC9027EF8AFD004DE39E /* RankingTypes.swift */; };
+		0976AC9427F092C5004DE39E /* CurrentRoundLeagueServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976AC9327F092C5004DE39E /* CurrentRoundLeagueServerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +207,7 @@
 		0976AC8A27EF6BFE004DE39E /* TopPlayerScorers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TopPlayerScorers.json; sourceTree = "<group>"; };
 		0976AC8D27EF85FE004DE39E /* RankingPlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPlayerList.swift; sourceTree = "<group>"; };
 		0976AC9027EF8AFD004DE39E /* RankingTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTypes.swift; sourceTree = "<group>"; };
+		0976AC9327F092C5004DE39E /* CurrentRoundLeagueServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRoundLeagueServerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +347,7 @@
 				0976AC4F27EB97D8004DE39E /* MatchLineupsServerModel.swift */,
 				0976AC6F27EE7B70004DE39E /* PlayerTrophiesServerModel.swift */,
 				0976AC8727EF4CC7004DE39E /* RankingPlayersServerModel.swift */,
+				0976AC9327F092C5004DE39E /* CurrentRoundLeagueServerModel.swift */,
 			);
 			path = ServerModel;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				0976AC1A27EA4495004DE39E /* LeagueRoundsProvider.swift in Sources */,
 				0976AC8227EF4990004DE39E /* RankingsView.swift in Sources */,
 				0976AC1B27EA4495004DE39E /* LeagueRoundsView.swift in Sources */,
+				0976AC9427F092C5004DE39E /* CurrentRoundLeagueServerModel.swift in Sources */,
 				0976AB0E27DCA696004DE39E /* ImageLoader.swift in Sources */,
 				0976ABF627E8FEF5004DE39E /* TeamMatchesView.swift in Sources */,
 				0976ABAF27E2480C004DE39E /* TeamViewModel.swift in Sources */,
