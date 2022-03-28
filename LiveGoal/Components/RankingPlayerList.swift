@@ -12,12 +12,13 @@ struct RankingPlayerList: View {
     //var modelTopPlayers: [RankingPlayer] = RankingPlayersServerModel.stubbedTopPlayers
     var modelTopPlayers:  [PlayerDetailStatisticsModelView]
     var rankingType: RankingTypes = .Goals
+    var startPosition: Int = 1
     
     
     var body: some View {
         VStack(spacing: 0, content: {
             ForEach(0..<self.modelTopPlayers.count, id: \.self){ item in
-                RankingPlayerCell(model: modelTopPlayers[item], position: item + 1, rankingType: rankingType)
+                RankingPlayerCell(model: modelTopPlayers[item], position: item + self.startPosition, rankingType: rankingType)
                     .background((item % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.05))
             }
         })
