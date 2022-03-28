@@ -183,6 +183,13 @@ class Utils {
         return Int(parts[1].trimmingCharacters(in: .whitespaces)) ?? 0
     }
     
+    static func calculatePercentageDecimal(number1: Int, number2: Int) -> Float {
+        if number1 == 0 && number2 == 0 {
+            return 0.5
+        }
+        return Float(number1) / (Float(number1) + (Float(number2)))
+    }
+    
     static func getPlayerPositionColor(position: String) -> Color {
         switch position {
         case PlayerPosition.Goalkeeper.rawValue:

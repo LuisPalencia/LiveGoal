@@ -135,12 +135,13 @@ struct DetailTeamView: View {
                 
                 //Spacer()
                 
-                Button(action: {
-                    //
-                }, label: {
-                    Text("Stadistics")
-                        .buttonStyleH1()
-                })
+                NavigationLink(
+                    destination: TeamStatisticsCoordinator.view(dto: TeamStatisticsCoordinatorDTO(idTeam: self.viewModel.dataTeamInfo?.team?.id ?? 0, season: self.viewModel.getCurrentSeason(), idLeague: Constants.laLigaId)),
+                    label: {
+                        Text("Stadistics")
+                            .buttonStyleH1()
+                    })
+                    .buttonStyle(PlainButtonStyle())
             })
             .padding(.bottom, 20)
             
