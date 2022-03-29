@@ -85,6 +85,8 @@ struct URLEnpoint {
     static let endpointPlayerStatistics = "players?id=%@&team=%@&season=%@&league=%@"
     // Endpoint of player trophies
     static let endpointPlayerTrophies = "trophies?player=%@"
+    // Endpoint of player transfers
+    static let endpointTransfersPlayer = "transfers?player=%@"
     // Endpoint of season rounds
     static let endpointSeasonRounds = "fixtures/rounds?season=%@&league=%@"
     // Endpoint of all matches of a season

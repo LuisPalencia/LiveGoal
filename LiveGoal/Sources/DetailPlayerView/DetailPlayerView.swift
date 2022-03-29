@@ -29,10 +29,11 @@ struct DetailPlayerView: View {
 
     var viewModel: PlayerDetail = DetailPlayerServerModel.stubbedPlayer
     var trophies: [PlayerTrophie] = PlayerTrophiesServerModel.stubbedPlayerTrophiesList
+    var transfers: [Transfer] = PlayerTransfersServerModel.stubbedPlayerTransfersList
     
     //@StateObject var viewModel = DetailPlayerViewModel()
     @State private var optionSelected = "Information"
-    var optionsMenu = ["Information", "Trophies"]
+    var optionsMenu = ["Information", "Trophies", "Transfers"]
     
     var body: some View {
         ZStack{
@@ -94,8 +95,11 @@ struct DetailPlayerView: View {
             
             if optionSelected == "Information"{
                 infoPlayer
-            }else {
+            }else if optionSelected == "Trophies"{
                 trophiesView
+            }
+            else {
+                transfersView
             }
         })
         //.padding()
@@ -420,11 +424,22 @@ struct DetailPlayerView: View {
     
     var trophiesView: some View {
         VStack(spacing: 0, content: {
-            ForEach(self.trophies){ trophie in
-               TrophyItem(model: trophie)
+            ForEach(0..<self.trophies.count, id: \.self){ item in
+                TrophyItem(model: self.trophies[item])
+                .background((item % 2) == 0 ? Color.white.opacity(1) : Color.black.opacity(0.1))
             }
         })
     }
+    
+    var transfersView: some View {
+        VStack(spacing: 0, content: {
+            ForEach(0..<self.transfers.count, id: \.self){ item in
+                PlayerTransferItem(model: self.transfers[item])
+                    .background((item % 2) == 0 ? Color.white.opacity(1) : Color.black.opacity(0.1))
+            }
+        })
+    }
+    
     
     func getTotalReds(yellowRed: Int, red: Int) -> Int {
         return yellowRed + red

@@ -29,12 +29,14 @@ import Foundation
 protocol DetailPlayerInteractorInputProtocol: BaseInteractorInputProtocol {
     func fetchDataPlayerInteractor()
     func fetchDataPlayerTrophiesInteractor()
+    func fetchDataPlayerTransfersInteractor()
 }
 
 // Output Provider
 protocol DetailPlayerProviderOutputProtocol: BaseProviderOutputProtocol {
     func setInfoPlayer(completion: Result<DetailPlayerServerModel?, NetworkError>)
     func setInfoPlayerTrophies(completion: Result<PlayerTrophiesServerModel?, NetworkError>)
+    func setInfoPlayerTransfers(completion: Result<PlayerTransfersServerModel?, NetworkError>)
 }
 
 
@@ -84,6 +86,10 @@ extension DetailPlayerInteractor: DetailPlayerInteractorInputProtocol {
     func fetchDataPlayerTrophiesInteractor() {
         self.provider?.fetchDataPlayerTrophiesProvider()
     }
+    
+    func fetchDataPlayerTransfersInteractor() {
+        self.provider?.fetchDataPlayerTranfersProvider()
+    }
 }
 
 // Output Provider
@@ -99,6 +105,20 @@ extension DetailPlayerInteractor: DetailPlayerProviderOutputProtocol{
     }
     
     func setInfoPlayerTrophies(completion: Result<PlayerTrophiesServerModel?, NetworkError>) {
-        
+        switch completion {
+        case .success(let data):
+            self.viewModel?.setInformationPlayerTrophies(data: data?.response)
+        case .failure(let error):
+            debugPrint(error)
+        }
+    }
+    
+    func setInfoPlayerTransfers(completion: Result<PlayerTransfersServerModel?, NetworkError>) {
+        switch completion {
+        case .success(let data):
+            self.viewModel?.setInformationPlayerTransfers(data: data?.response)
+        case .failure(let error):
+            debugPrint(error)
+        }
     }
 }

@@ -30,6 +30,7 @@ import Combine
 protocol DetailPlayerProviderInputProtocol: BaseProviderInputProtocol {
     func fetchDataPlayerProvider()
     func fetchDataPlayerTrophiesProvider()
+    func fetchDataPlayerTranfersProvider()
 }
 
 final class DetailPlayerProvider: BaseProvider{
@@ -64,7 +65,7 @@ extension DetailPlayerProvider: DetailPlayerProviderInputProtocol{
     }
     
     func fetchDataPlayerTrophiesProvider() {
-        self.networkService.requestGeneric(payloadRequest: DetailPlayerRequestDTO.requestDataPlayerTrophies(idPlayer: String(dataDTO?.idPlayer ?? 0)), entityClass: PlayerTrophiesServerModel.self)
+        self.networkService.requestGeneric(payloadRequest: DetailPlayerRequestDTO.requestDataPlayer(endpoint: URLEnpoint.endpointPlayerTrophies, idPlayer: String(dataDTO?.idPlayer ?? 0)), entityClass: PlayerTrophiesServerModel.self)
             .sink { [weak self] completion in
                 guard self != nil else { return }
                 switch completion{
@@ -76,6 +77,23 @@ extension DetailPlayerProvider: DetailPlayerProviderInputProtocol{
             } receiveValue: { [weak self] resultData in
                 guard self != nil else { return }
                 self?.interactor?.setInfoPlayerTrophies(completion: .success(resultData))
+            }
+            .store(in: &cancellable)
+    }
+    
+    func fetchDataPlayerTranfersProvider() {
+        self.networkService.requestGeneric(payloadRequest: DetailPlayerRequestDTO.requestDataPlayer(endpoint: URLEnpoint.endpointTransfersPlayer, idPlayer: String(dataDTO?.idPlayer ?? 0)), entityClass: PlayerTransfersServerModel.self)
+            .sink { [weak self] completion in
+                guard self != nil else { return }
+                switch completion{
+                case .finished:
+                    debugPrint("finished")
+                case let .failure(error):
+                    self?.interactor?.setInfoPlayerTransfers(completion: .failure(error))
+                }
+            } receiveValue: { [weak self] resultData in
+                guard self != nil else { return }
+                self?.interactor?.setInfoPlayerTransfers(completion: .success(resultData))
             }
             .store(in: &cancellable)
     }
@@ -94,13 +112,12 @@ struct DetailPlayerRequestDTO {
         return request
     }
     
-    static func requestDataPlayerTrophies(idPlayer: String) -> RequestDTO {
+    static func requestDataPlayer(endpoint: String, idPlayer: String) -> RequestDTO {
         let argument: [CVarArg] = [idPlayer]
-        let urlComplete = String(format: URLEnpoint.endpointPlayerTrophies, arguments: argument)
+        let urlComplete = String(format: endpoint, arguments: argument)
         var headers = URLEnpoint.headersAPI
         headers["x-rapidapi-key"] = Obfuscator().reveal(key: Constants.Api.apiKey)
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService, header: headers)
         return request
     }
-    
 }

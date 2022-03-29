@@ -1,0 +1,87 @@
+{
+    "get": "transfers",
+    "parameters": {
+        "player": "614"
+    },
+    "errors": [],
+    "results": 1,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "player": {
+                "id": 614,
+                "name": "C. Bravo"
+            },
+            "update": "2022-03-29T09:49:01+00:00",
+            "transfers": [
+                {
+                    "date": "2020-08-30",
+                    "type": "N/A",
+                    "teams": {
+                        "in": {
+                            "id": 543,
+                            "name": "Real Betis",
+                            "logo": "https://media.api-sports.io/football/teams/543.png"
+                        },
+                        "out": {
+                            "id": 50,
+                            "name": "Manchester City",
+                            "logo": "https://media.api-sports.io/football/teams/50.png"
+                        }
+                    }
+                },
+                {
+                    "date": "2016-08-25",
+                    "type": "€ 19.9M",
+                    "teams": {
+                        "in": {
+                            "id": 50,
+                            "name": "Manchester City",
+                            "logo": "https://media.api-sports.io/football/teams/50.png"
+                        },
+                        "out": {
+                            "id": 529,
+                            "name": "Barcelona",
+                            "logo": "https://media.api-sports.io/football/teams/529.png"
+                        }
+                    }
+                },
+                {
+                    "date": "2014-07-01",
+                    "type": "€ 12M",
+                    "teams": {
+                        "in": {
+                            "id": 529,
+                            "name": "Barcelona",
+                            "logo": "https://media.api-sports.io/football/teams/529.png"
+                        },
+                        "out": {
+                            "id": 548,
+                            "name": "Real Sociedad",
+                            "logo": "https://media.api-sports.io/football/teams/548.png"
+                        }
+                    }
+                },
+                {
+                    "date": "2006-07-01",
+                    "type": "€ 1.2M",
+                    "teams": {
+                        "in": {
+                            "id": 548,
+                            "name": "Real Sociedad",
+                            "logo": "https://media.api-sports.io/football/teams/548.png"
+                        },
+                        "out": {
+                            "id": 2315,
+                            "name": "Colo Colo",
+                            "logo": "https://media.api-sports.io/football/teams/2315.png"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
