@@ -27,7 +27,8 @@ struct PlayerTrophiesServerModel: Codable {
 }
 
 // MARK: - Response
-struct PlayerTrophie: Codable {
+struct PlayerTrophie: Codable, Identifiable {
+    let id = UUID()
     let league: String?
     let country: String?
     let season: String?
@@ -38,5 +39,17 @@ struct PlayerTrophie: Codable {
         case country = "country"
         case season = "season"
         case place = "place"
+    }
+}
+
+extension PlayerTrophiesServerModel {
+    
+    static var stubbedPlayerTrophiesList: [PlayerTrophie] {
+        let results: PlayerTrophiesServerModel? = try? Bundle.main.loadAndDecodeJSON(filename: "PlayerTrophies")
+        return (results?.response)!
+    }
+    
+    static var stubbedPlayerTrophies: PlayerTrophie {
+        return stubbedPlayerTrophiesList[0]
     }
 }

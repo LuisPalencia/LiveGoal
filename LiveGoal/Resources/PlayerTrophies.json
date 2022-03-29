@@ -1,0 +1,56 @@
+{
+    "get": "trophies",
+    "parameters": {
+        "player": "47270"
+    },
+    "errors": [],
+    "results": 7,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "league": "Super Cup",
+            "country": "Spain",
+            "season": "2021/2022",
+            "place": "2nd Place"
+        },
+        {
+            "league": "Copa del Rey",
+            "country": "Spain",
+            "season": "2020/2021",
+            "place": "2nd Place"
+        },
+        {
+            "league": "Super Cup",
+            "country": "Spain",
+            "season": "2020/2021",
+            "place": "Winner"
+        },
+        {
+            "league": "Olympics",
+            "country": "World",
+            "season": "2020 Tokyo",
+            "place": "2nd Place"
+        },
+        {
+            "league": "Copa del Rey",
+            "country": "Spain",
+            "season": "2019/2020",
+            "place": "2nd Place"
+        },
+        {
+            "league": "UEFA U21 Championship",
+            "country": "Europe",
+            "season": "2019 Italy",
+            "place": "Winner"
+        },
+        {
+            "league": "UEFA U19 Championship",
+            "country": "Europe",
+            "season": "2015 Greece",
+            "place": "Winner"
+        }
+    ]
+}

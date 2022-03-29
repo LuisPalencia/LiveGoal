@@ -78,7 +78,7 @@ struct LeagueClassificationView: View {
             .navigationBarBackButtonHidden(true)
             .edgesIgnoringSafeArea(.all)
             .onAppear {
-                //self.viewModel.fetchData()
+                self.viewModel.fetchData()
             }
         }
         

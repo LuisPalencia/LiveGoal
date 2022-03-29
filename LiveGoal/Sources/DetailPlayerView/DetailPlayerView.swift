@@ -27,15 +27,19 @@ import SwiftUI
 
 struct DetailPlayerView: View {
 
-    //@StateObject var viewModel = DetailPlayerViewModel()
     var viewModel: PlayerDetail = DetailPlayerServerModel.stubbedPlayer
+    var trophies: [PlayerTrophie] = PlayerTrophiesServerModel.stubbedPlayerTrophiesList
+    
+    //@StateObject var viewModel = DetailPlayerViewModel()
+    @State private var optionSelected = "Information"
+    var optionsMenu = ["Information", "Trophies"]
     
     var body: some View {
         ZStack{
             ScrollView{
                 VStack{
                     headerView
-                    infoPlayer
+                    bodyView
                 }
             }
         }
@@ -55,14 +59,58 @@ struct DetailPlayerView: View {
         })
     }
     
-    var infoPlayer: some View {
-        VStack(spacing: 20, content: {
+    var bodyView: some View {
+        VStack(spacing: 10, content: {
             VStack(alignment: .center, content: {
                 if self.viewModel.statistics?[0].team?.logoUrl != nil {
                     TeamPlayerImage(teamImageUrl: (self.viewModel.statistics?[0].team!.logoUrl)!)
                 }
             })
+            .padding(.top, 20)
             
+            HStack(spacing: 0){
+                ForEach(optionsMenu, id: \.self){ item in
+                    HStack(alignment: .center, spacing: 0, content: {
+                        Button(action: {
+                            self.optionSelected = item
+                        }, label: {
+                            VStack{
+                                Text(item)
+                                    .font(Font.system(size: 18, weight: .semibold))
+                                    .padding(EdgeInsets(top: 10, leading: 3, bottom: 10, trailing: 15))
+                                Rectangle()
+                                    .fill(self.optionSelected == item ? Color.blue : Color.black)
+                                    .frame(height: 3)
+                            }
+                            
+                        })
+                        .foregroundColor(self.optionSelected == item ? .blue : .black)
+                        .cornerRadius(10)
+                    })
+                    .padding([.leading, .trailing], -8)
+                }
+            }
+            .padding([.leading, .trailing], 15)
+            
+            if optionSelected == "Information"{
+                infoPlayer
+            }else {
+                trophiesView
+            }
+        })
+        //.padding()
+        .padding(.bottom, 50)
+        .background(
+            roundedShape()
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: -50)
+        
+        )
+        .padding(.top, -50)
+    }
+    
+    var infoPlayer: some View {
+        VStack(spacing: 20, content: {
             VStack(spacing: 20, content: {
                 HStack{
                     Text("\(self.viewModel.player?.firstname ?? "") \(self.viewModel.player?.lastname ?? "")")
@@ -72,53 +120,78 @@ struct DetailPlayerView: View {
                     Spacer()
                 }
                 
-                HStack{
-                    Text("Age: \(self.viewModel.player?.age ?? 0)")
-                        .font(.callout)
-                        .fontWeight(.bold)
+                HStack(spacing: 10){
+                    Image("age")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
+                    Text("Age: \(self.viewModel.player?.age ?? 0) years")
+                        .font(.headline)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image(systemName: "calendar")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
                     Text("Date of birth: \(self.viewModel.player?.birth?.date ?? "Unknown")")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image(systemName: "flag.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
                     Text("Nationality: \(self.viewModel.player?.nationality ?? "Unknown")")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
                 
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image("height")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
                     Text("Height: \(self.viewModel.player?.height ?? "Unknown")")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image("weight")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
                     Text("Weight: \(self.viewModel.player?.weight ?? "Unknown")")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
                 if self.viewModel.player?.injured ?? false == true {
-                    HStack{
+                    HStack(spacing: 10){
                         Text("Currently injured")
                             .font(.callout)
-                            .fontWeight(.bold)
+                            .fontWeight(.semibold)
                             .foregroundColor(.red)
                             .lineLimit(1)
                         Spacer()
@@ -134,43 +207,68 @@ struct DetailPlayerView: View {
                 
                 
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image(systemName: "circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
                     Text("Position: \(self.viewModel.statistics?[0].games?.position ?? "Unknown")")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image(systemName: "circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
                     Text("Matches: \(self.viewModel.statistics?[0].games?.appearences ?? 0)")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image(systemName: "circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
                     Text("Headline: \(self.viewModel.statistics?[0].games?.lineups ?? 0)")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image(systemName: "circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
                     Text("Minutes: \(self.viewModel.statistics?[0].games?.minutes ?? 0)")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image(systemName: "circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.blue)
                     Text("Rating: \(Utils.roundStringDouble(number: self.viewModel.statistics?[0].games?.rating ?? "2.0")) / 10 ★")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
@@ -178,77 +276,133 @@ struct DetailPlayerView: View {
                 if let positionUnw = self.viewModel.statistics?[0].games?.position {
                     if positionUnw != PlayerPosition.Goalkeeper.rawValue {
                         // Defender, midfielder or attacker
-                        HStack{
+                        HStack(spacing: 10){
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
                             Text("Goals: \(self.viewModel.statistics?[0].goals?.total ?? 0)")
                                 .font(.callout)
-                                .fontWeight(.bold)
+                                .fontWeight(.semibold)
                                 .lineLimit(1)
                             Spacer()
                         }
                         
-                        HStack{
+                        HStack(spacing: 10){
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
                             Text("Assists: \(self.viewModel.statistics?[0].goals?.assists ?? 0)")
                                 .font(.callout)
-                                .fontWeight(.bold)
+                                .fontWeight(.semibold)
                                 .lineLimit(1)
                             Spacer()
                         }
                         
-                        HStack{
+                        HStack(spacing: 10){
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
                             Text("Passes completed: \(self.viewModel.statistics?[0].passes?.accuracy ?? 0)%")
                                 .font(.callout)
-                                .fontWeight(.bold)
+                                .fontWeight(.semibold)
                                 .lineLimit(1)
                             Spacer()
                         }
                         
-                        HStack{
+                        HStack(spacing: 10){
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
                             Text("Dribles: \(self.viewModel.statistics?[0].dribbles?.success ?? 0) / \(self.viewModel.statistics?[0].dribbles?.attempts ?? 0)")
                                 .font(.callout)
-                                .fontWeight(.bold)
+                                .fontWeight(.semibold)
                                 .lineLimit(1)
                             Spacer()
                         }
                     }else{
                         // Goalkeeper
-                        HStack{
+                        HStack(spacing: 10){
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
                             Text("Saves: \(self.viewModel.statistics?[0].goals?.saves ?? 0)")
                                 .font(.callout)
-                                .fontWeight(.bold)
+                                .fontWeight(.semibold)
                                 .lineLimit(1)
                             Spacer()
                         }
                         
-                        HStack{
+                        HStack(spacing: 10){
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
                             Text("Goals conceded: \(self.viewModel.statistics?[0].goals?.conceded ?? 0)")
                                 .font(.callout)
-                                .fontWeight(.bold)
+                                .fontWeight(.semibold)
                                 .lineLimit(1)
                             Spacer()
                         }
                         
-                        HStack{
+                        HStack(spacing: 10){
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
                             Text("Penalties saved: \(self.viewModel.statistics?[0].penalty?.saved ?? 0)")
                                 .font(.callout)
-                                .fontWeight(.bold)
+                                .fontWeight(.semibold)
                                 .lineLimit(1)
                             Spacer()
                         }
                     }
                 }
                 
-                HStack{
+                HStack(spacing: 10){
+                    Image(systemName: "circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.yellow)
                     Text("Yellow cards: \(self.viewModel.statistics?[0].cards?.yellow ?? 0)")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
-                HStack{
+//                Rectangle()
+//                    .foregroundColor(.black)
+//                    .frame(
+//                          minWidth: 0,
+//                          maxWidth: .infinity,
+//                          minHeight: 1,
+//                          maxHeight: 1,
+//                          alignment: .topLeading
+//                        )
+//
+                
+                HStack(spacing: 10){
+                    Image(systemName: "circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.red)
                     Text("Red cards: \( self.getTotalReds(yellowRed: self.viewModel.statistics?[0].cards?.yellowred ?? 0, red: self.viewModel.statistics?[0].cards?.red ?? 0))")
                         .font(.callout)
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
@@ -259,16 +413,17 @@ struct DetailPlayerView: View {
             
         })
         .padding()
-        .padding(.bottom, 100)
-        .background(
-            roundedShape()
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: -50)
         
-        )
-        .padding(.top, -50)
 
         
+    }
+    
+    var trophiesView: some View {
+        VStack(spacing: 0, content: {
+            ForEach(self.trophies){ trophie in
+               TrophyItem(model: trophie)
+            }
+        })
     }
     
     func getTotalReds(yellowRed: Int, red: Int) -> Int {
