@@ -46,8 +46,7 @@ final class DetailPlayerCoordinator: BaseCoordinator {
                                               interactor: Interactor.self,
                                               provider: Provider.self)
         vip.provider.dataDTO = dto
-        //let view = ContentView(viewModel: vip.viewModel)
-        let view = ContentView()
+        let view = ContentView(viewModel: vip.viewModel)
         return view
     }
 

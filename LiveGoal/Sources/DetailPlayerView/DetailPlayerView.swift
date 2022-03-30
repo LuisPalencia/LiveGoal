@@ -27,11 +27,7 @@ import SwiftUI
 
 struct DetailPlayerView: View {
 
-    var viewModel: PlayerDetail = DetailPlayerServerModel.stubbedPlayer
-    var trophies: [PlayerTrophie] = PlayerTrophiesServerModel.stubbedPlayerTrophiesList
-    var transfers: [Transfer] = PlayerTransfersServerModel.stubbedPlayerTransfersList
-    
-    //@StateObject var viewModel = DetailPlayerViewModel()
+    @StateObject var viewModel = DetailPlayerViewModel()
     @State private var optionSelected = "Information"
     var optionsMenu = ["Information", "Trophies", "Transfers"]
     
@@ -47,15 +43,15 @@ struct DetailPlayerView: View {
         
         //.padding(.horizontal, 8)
         .onAppear {
-            //self.viewModel.fetchData()
+            self.viewModel.fetchData()
         }
     }
     
     
     var headerView: some View{
         ZStack(alignment: .topLeading, content: {
-            if self.viewModel.player?.photoUrl != nil {
-                PlayerImage(playerImageUrl: self.viewModel.player!.photoUrl)
+            if let photoUrlUnw = self.viewModel.dataPlayer?.player?.photoUrl {
+                PlayerImage(playerImageUrl: photoUrlUnw)
             }
         })
     }
@@ -63,8 +59,8 @@ struct DetailPlayerView: View {
     var bodyView: some View {
         VStack(spacing: 10, content: {
             VStack(alignment: .center, content: {
-                if self.viewModel.statistics?[0].team?.logoUrl != nil {
-                    TeamPlayerImage(teamImageUrl: (self.viewModel.statistics?[0].team!.logoUrl)!)
+                if let photoTeamUnw = self.viewModel.dataPlayer?.logoTeamUrl {
+                    TeamPlayerImage(teamImageUrl: photoTeamUnw)
                 }
             })
             .padding(.top, 20)
@@ -117,7 +113,7 @@ struct DetailPlayerView: View {
         VStack(spacing: 20, content: {
             VStack(spacing: 20, content: {
                 HStack{
-                    Text("\(self.viewModel.player?.firstname ?? "") \(self.viewModel.player?.lastname ?? "")")
+                    Text("\(self.viewModel.dataPlayer?.player?.firstname ?? "") \(self.viewModel.dataPlayer?.player?.lastname ?? "")")
                         .font(.title2)
                         .fontWeight(.bold)
                         .lineLimit(1)
@@ -130,7 +126,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Age: \(self.viewModel.player?.age ?? 0) years")
+                    Text("Age: \(self.viewModel.dataPlayer?.player?.age ?? 0) years")
                         .font(.headline)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -143,7 +139,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Date of birth: \(self.viewModel.player?.birth?.date ?? "Unknown")")
+                    Text("Date of birth: \(self.viewModel.dataPlayer?.player?.birth?.date ?? "Unknown")")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -156,7 +152,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Nationality: \(self.viewModel.player?.nationality ?? "Unknown")")
+                    Text("Nationality: \(self.viewModel.dataPlayer?.player?.nationality ?? "Unknown")")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -171,7 +167,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Height: \(self.viewModel.player?.height ?? "Unknown")")
+                    Text("Height: \(self.viewModel.dataPlayer?.player?.height ?? "Unknown")")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -184,14 +180,14 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Weight: \(self.viewModel.player?.weight ?? "Unknown")")
+                    Text("Weight: \(self.viewModel.dataPlayer?.player?.weight ?? "Unknown")")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
-                if self.viewModel.player?.injured ?? false == true {
+                if self.viewModel.dataPlayer?.player?.injured ?? false == true {
                     HStack(spacing: 10){
                         Text("Currently injured")
                             .font(.callout)
@@ -217,7 +213,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Position: \(self.viewModel.statistics?[0].games?.position ?? "Unknown")")
+                    Text("Position: \(self.viewModel.dataPlayer?.games?.position ?? "Unknown")")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -230,7 +226,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Matches: \(self.viewModel.statistics?[0].games?.appearences ?? 0)")
+                    Text("Matches: \(self.viewModel.dataPlayer?.games?.appearences ?? 0)")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -243,7 +239,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Headline: \(self.viewModel.statistics?[0].games?.lineups ?? 0)")
+                    Text("Headline: \(self.viewModel.dataPlayer?.games?.lineups ?? 0)")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -256,7 +252,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Minutes: \(self.viewModel.statistics?[0].games?.minutes ?? 0)")
+                    Text("Minutes: \(self.viewModel.dataPlayer?.games?.minutes ?? 0)")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -270,14 +266,14 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.blue)
-                    Text("Rating: \(Utils.roundStringDouble(number: self.viewModel.statistics?[0].games?.rating ?? "2.0")) / 10 ★")
+                    Text("Rating: \(Utils.roundStringDouble(number: self.viewModel.dataPlayer?.games?.rating ?? "2.0")) / 10 ★")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
                     Spacer()
                 }
                 
-                if let positionUnw = self.viewModel.statistics?[0].games?.position {
+                if let positionUnw = self.viewModel.dataPlayer?.games?.position {
                     if positionUnw != PlayerPosition.Goalkeeper.rawValue {
                         // Defender, midfielder or attacker
                         HStack(spacing: 10){
@@ -286,7 +282,7 @@ struct DetailPlayerView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.blue)
-                            Text("Goals: \(self.viewModel.statistics?[0].goals?.total ?? 0)")
+                            Text("Goals: \(self.viewModel.dataPlayer?.goals?.total ?? 0)")
                                 .font(.callout)
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
@@ -299,7 +295,7 @@ struct DetailPlayerView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.blue)
-                            Text("Assists: \(self.viewModel.statistics?[0].goals?.assists ?? 0)")
+                            Text("Assists: \(self.viewModel.dataPlayer?.goals?.assists ?? 0)")
                                 .font(.callout)
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
@@ -312,7 +308,7 @@ struct DetailPlayerView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.blue)
-                            Text("Passes completed: \(self.viewModel.statistics?[0].passes?.accuracy ?? 0)%")
+                            Text("Passes completed: \(self.viewModel.dataPlayer?.passes?.accuracy ?? 0)%")
                                 .font(.callout)
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
@@ -325,7 +321,7 @@ struct DetailPlayerView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.blue)
-                            Text("Dribles: \(self.viewModel.statistics?[0].dribbles?.success ?? 0) / \(self.viewModel.statistics?[0].dribbles?.attempts ?? 0)")
+                            Text("Dribles: \(self.viewModel.dataPlayer?.dribbles?.success ?? 0) / \(self.viewModel.dataPlayer?.dribbles?.attempts ?? 0)")
                                 .font(.callout)
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
@@ -339,7 +335,7 @@ struct DetailPlayerView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.blue)
-                            Text("Saves: \(self.viewModel.statistics?[0].goals?.saves ?? 0)")
+                            Text("Saves: \(self.viewModel.dataPlayer?.goals?.saves ?? 0)")
                                 .font(.callout)
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
@@ -352,7 +348,7 @@ struct DetailPlayerView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.blue)
-                            Text("Goals conceded: \(self.viewModel.statistics?[0].goals?.conceded ?? 0)")
+                            Text("Goals conceded: \(self.viewModel.dataPlayer?.goals?.conceded ?? 0)")
                                 .font(.callout)
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
@@ -365,7 +361,7 @@ struct DetailPlayerView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.blue)
-                            Text("Penalties saved: \(self.viewModel.statistics?[0].penalty?.saved ?? 0)")
+                            Text("Penalties saved: \(self.viewModel.dataPlayer?.penalty?.saved ?? 0)")
                                 .font(.callout)
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
@@ -380,7 +376,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.yellow)
-                    Text("Yellow cards: \(self.viewModel.statistics?[0].cards?.yellow ?? 0)")
+                    Text("Yellow cards: \(self.viewModel.dataPlayer?.cards?.yellow ?? 0)")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -404,7 +400,7 @@ struct DetailPlayerView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 25, height: 25)
                         .foregroundColor(.red)
-                    Text("Red cards: \( self.getTotalReds(yellowRed: self.viewModel.statistics?[0].cards?.yellowred ?? 0, red: self.viewModel.statistics?[0].cards?.red ?? 0))")
+                    Text("Red cards: \( self.getTotalReds(yellowRed: self.viewModel.dataPlayer?.cards?.yellowred ?? 0, red: self.viewModel.dataPlayer?.cards?.red ?? 0))")
                         .font(.callout)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -424,18 +420,18 @@ struct DetailPlayerView: View {
     
     var trophiesView: some View {
         VStack(spacing: 0, content: {
-            ForEach(0..<self.trophies.count, id: \.self){ item in
-                TrophyItem(model: self.trophies[item])
-                .background((item % 2) == 0 ? Color.white.opacity(1) : Color.black.opacity(0.1))
+            ForEach(0..<self.viewModel.dataPlayerTrophies.count, id: \.self){ item in
+                TrophyItem(model: self.viewModel.dataPlayerTrophies[item])
+                //.background((item % 2) == 0 ? Color.white.opacity(1) : Color.black.opacity(0.1))
             }
         })
     }
     
     var transfersView: some View {
         VStack(spacing: 0, content: {
-            ForEach(0..<self.transfers.count, id: \.self){ item in
-                PlayerTransferItem(model: self.transfers[item])
-                    .background((item % 2) == 0 ? Color.white.opacity(1) : Color.black.opacity(0.1))
+            ForEach(0..<self.viewModel.dataPlayerTransfers.count, id: \.self){ item in
+                PlayerTransferItem(model: self.viewModel.dataPlayerTransfers[item])
+                    //.background((item % 2) == 0 ? Color.white.opacity(1) : Color.black.opacity(0.1))
             }
         })
     }
@@ -461,7 +457,7 @@ struct TeamPlayerImage: View {
                     .frame(width: 60, height: 60)
                     .cornerRadius(8)
                     .shadow(radius: 10)
-                    .clipShape(Circle())
+                    //.clipShape(Circle())
                     //.overlay(Circle().stroke(Color.black, lineWidth: 2))
 
             }

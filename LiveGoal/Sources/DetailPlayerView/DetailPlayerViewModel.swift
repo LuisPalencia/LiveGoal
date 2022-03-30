@@ -29,7 +29,7 @@ import Foundation
 protocol DetailPlayerInteractorOutputProtocol: BaseInteractorOutputProtocol {
     func setInformationPlayer(data: PlayerDetailStatisticsModelView?)
     func setInformationPlayerTrophies(data: [PlayerTrophie]?)
-    func setInformationPlayerTransfers(data: [PlayerTransfers]?)
+    func setInformationPlayerTransfers(data: [Transfer]?)
 }
 
 final class DetailPlayerViewModel: BaseViewModel, ObservableObject {
@@ -42,7 +42,7 @@ final class DetailPlayerViewModel: BaseViewModel, ObservableObject {
     // MARK: - Variables @Published
     @Published var dataPlayer: PlayerDetailStatisticsModelView?
     @Published var dataPlayerTrophies: [PlayerTrophie] = []
-    @Published var dataPlayerTransfers: [PlayerTransfers] = []
+    @Published var dataPlayerTransfers: [Transfer] = []
     
     // MARK: - Metodospublicos
     func fetchData(){
@@ -66,7 +66,7 @@ extension DetailPlayerViewModel: DetailPlayerInteractorOutputProtocol {
         self.dataPlayerTrophies = data ?? []
     }
     
-    func setInformationPlayerTransfers(data: [PlayerTransfers]?) {
+    func setInformationPlayerTransfers(data: [Transfer]?) {
         self.dataPlayerTransfers = data ?? []
     }
 }

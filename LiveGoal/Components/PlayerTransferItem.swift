@@ -82,6 +82,8 @@ struct PlayerTransferItem: View {
                 .font(.headline)
                 .fontWeight(.semibold)
                 .padding(.top, 5)
+            
+            
         })
         .padding([.top, .bottom], 10)
         .onAppear{

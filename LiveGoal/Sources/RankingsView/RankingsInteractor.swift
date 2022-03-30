@@ -72,7 +72,10 @@ final class RankingsInteractor: BaseInteractor {
                                                                          shots: statisticsUnw[0].shots,
                                                                          goals: statisticsUnw[0].goals,
                                                                          fouls: statisticsUnw[0].fouls,
-                                                                         cards: statisticsUnw[0].cards)
+                                                                         cards: statisticsUnw[0].cards,
+                                                                         passes: statisticsUnw[0].passes,
+                                                                         dribbles: statisticsUnw[0].dribbles,
+                                                                         penalty: statisticsUnw[0].penalty)
                             players.append(model)
                         }
                     }

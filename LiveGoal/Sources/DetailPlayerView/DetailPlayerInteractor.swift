@@ -65,7 +65,10 @@ final class DetailPlayerInteractor: BaseInteractor {
                                                                  shots: statisticsUnw[0].shots,
                                                                  goals: statisticsUnw[0].goals,
                                                                  fouls: statisticsUnw[0].fouls,
-                                                                 cards: statisticsUnw[0].cards)
+                                                                 cards: statisticsUnw[0].cards,
+                                                                 passes: statisticsUnw[0].passes,
+                                                                 dribbles: statisticsUnw[0].dribbles,
+                                                                 penalty: statisticsUnw[0].penalty)
                     return model
                 }
             }
@@ -116,7 +119,10 @@ extension DetailPlayerInteractor: DetailPlayerProviderOutputProtocol{
     func setInfoPlayerTransfers(completion: Result<PlayerTransfersServerModel?, NetworkError>) {
         switch completion {
         case .success(let data):
-            self.viewModel?.setInformationPlayerTransfers(data: data?.response)
+            if data?.response?.count ?? 0 > 0 {
+                self.viewModel?.setInformationPlayerTransfers(data: data?.response?[0].transfers)
+            }
+            
         case .failure(let error):
             debugPrint(error)
         }

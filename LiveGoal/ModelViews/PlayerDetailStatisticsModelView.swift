@@ -18,4 +18,8 @@ struct PlayerDetailStatisticsModelView: Identifiable {
     let goals: GoalsPlayer?
     let fouls: FoulsPlayer?
     let cards: CardsPlayer?
+    
+    let passes: PassesPlayer?
+    let dribbles: DribblesPlayer?
+    let penalty: PenaltyPlayer?
 }
