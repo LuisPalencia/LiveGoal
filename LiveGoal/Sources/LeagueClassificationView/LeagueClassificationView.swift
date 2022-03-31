@@ -30,57 +30,88 @@ struct LeagueClassificationView: View {
     @StateObject var viewModel = LeagueClassificationViewModel()
     //var viewModel: CurrentSeasonLeagueModelView
 
+    
     var body: some View {
         
-        ScrollView(.vertical, showsIndicators: false){
-            Section(header: VStack(alignment: .leading, spacing: 0, content: {
-                Text("Standing")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.horizontal)
-                    .padding(.bottom, 6)
-                
-                HStack{
-                    Text("Team")
-                        .font(.headline)
-                        .padding(.leading, 60)
-                    
-                    Spacer()
-                    
-                    Text(self.getHeaderTeamInfo())
-                        .multilineTextAlignment(.trailing)
-                        .font(.system(size: 14, weight: .bold))
-                        //.font(.headline)
-                        .padding(.trailing, 6)
-                        
-                }
-                //.padding(.horizontal)
-                .background(Color.blue.opacity(0.7))
-            })) {
-                VStack(spacing: 0) {
-                    ForEach(self.viewModel.standing ?? []){ standing in
-                        
-                        NavigationLink(
-                            destination: DetailTeamCoordinator.view(dto: DetailTeamCoordinatorDTO(idTeam: standing.id, season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0, idLeague: Constants.laLigaId)),
-                            //destination: Text("\(standing.team?.name ?? "")"),
-                            label: {
-                                StandingTeamItem(model: standing)
-                                    .padding(.bottom, 0)
-                                    .background((standing.rank! % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.1))
-                            })
-                            .buttonStyle(PlainButtonStyle())
-                        
-                    }
-                }
-            }
-            .padding(.bottom, 20)
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
-            .edgesIgnoringSafeArea(.all)
-            .onAppear {
-                self.viewModel.fetchData()
-            }
+        
+        
+        VStack(alignment: .center, spacing: 20, content: {
+            
+            Image("laliga_logo_color")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300, height: 35)
+            Text("Standing")
+                .font(.title3)
+                .fontWeight(.bold)
+                .padding(.horizontal)
+                .padding(.bottom, 6)
+            
+            StandingLeague(model: self.viewModel.standing ?? [], season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0)
+            
+            
+        })
+        .padding(.bottom, 80)
+        .padding(.top, 50)
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            self.viewModel.fetchData()
         }
+    }
+    
+//    var body2: some View {
+//
+//        ScrollView(.vertical, showsIndicators: false){
+//            Section(header: VStack(alignment: .leading, spacing: 0, content: {
+//                Text("Standing")
+//                    .font(.largeTitle)
+//                    .fontWeight(.bold)
+//                    .padding(.horizontal)
+//                    .padding(.bottom, 6)
+//
+//                HStack{
+//                    Text("Team")
+//                        .font(.headline)
+//                        .padding(.leading, 60)
+//
+//                    Spacer()
+//
+//                    Text(self.getHeaderTeamInfo())
+//                        .multilineTextAlignment(.trailing)
+//                        .font(.system(size: 14, weight: .bold))
+//                        //.font(.headline)
+//                        .padding(.trailing, 6)
+//
+//                }
+//                //.padding(.horizontal)
+//                .background(Color.blue.opacity(0.7))
+//            })) {
+//                VStack(spacing: 0) {
+//                    ForEach(self.viewModel.standing ?? []){ standing in
+//
+//                        NavigationLink(
+//                            destination: DetailTeamCoordinator.view(dto: DetailTeamCoordinatorDTO(idTeam: standing.id, season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0, idLeague: Constants.laLigaId)),
+//                            //destination: Text("\(standing.team?.name ?? "")"),
+//                            label: {
+//                                StandingTeamItem(model: standing)
+//                                    .padding(.bottom, 0)
+//                                    .background((standing.rank! % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.1))
+//                            })
+//                            .buttonStyle(PlainButtonStyle())
+//
+//                    }
+//                }
+//            }
+//            .padding(.bottom, 20)
+//            .navigationBarHidden(true)
+//            .navigationBarBackButtonHidden(true)
+//            .edgesIgnoringSafeArea(.all)
+//            .onAppear {
+//                self.viewModel.fetchData()
+//            }
+//        }
         
         
         
@@ -156,8 +187,9 @@ struct LeagueClassificationView: View {
         .onAppear {
             //self.viewModel.fetchData()
         }
- */
+ 
     }
+    
     
     func getHeaderTeamInfo() -> String {
         let fields = ["PT", "MP", "MW", "MD", "ML", "GF", "GA"].map {
@@ -166,7 +198,7 @@ struct LeagueClassificationView: View {
         
         return fields.reduce("", +)
     }
- 
+     */
     
     
 }

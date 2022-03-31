@@ -118,6 +118,7 @@
 		0976ACB327F32E78004DE39E /* PlayerTransfersServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACB227F32E78004DE39E /* PlayerTransfersServerModel.swift */; };
 		0976ACBB27F33278004DE39E /* PlayerTransfers.json in Resources */ = {isa = PBXBuildFile; fileRef = 0976ACBA27F33278004DE39E /* PlayerTransfers.json */; };
 		0976ACC027F333BE004DE39E /* PlayerTransferItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACBF27F333BE004DE39E /* PlayerTransferItem.swift */; };
+		0976ACC327F4A151004DE39E /* StandingLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACC227F4A151004DE39E /* StandingLeague.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -234,6 +235,7 @@
 		0976ACB227F32E78004DE39E /* PlayerTransfersServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTransfersServerModel.swift; sourceTree = "<group>"; };
 		0976ACBA27F33278004DE39E /* PlayerTransfers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PlayerTransfers.json; sourceTree = "<group>"; };
 		0976ACBF27F333BE004DE39E /* PlayerTransferItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTransferItem.swift; sourceTree = "<group>"; };
+		0976ACC227F4A151004DE39E /* StandingLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingLeague.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +435,7 @@
 				0976ACA927F23037004DE39E /* ProgressBar.swift */,
 				0976ACAC27F316D4004DE39E /* TrophyItem.swift */,
 				0976ACBF27F333BE004DE39E /* PlayerTransferItem.swift */,
+				0976ACC227F4A151004DE39E /* StandingLeague.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				0976AC2527EA56C0004DE39E /* SeasonRoundsServerModel.swift in Sources */,
 				0976AC0227E91369004DE39E /* DetailPlayerProvider.swift in Sources */,
 				0976AB4827DF973E004DE39E /* DetailTeamCoordinator.swift in Sources */,
+				0976ACC327F4A151004DE39E /* StandingLeague.swift in Sources */,
 				0976AB0027DCA5BD004DE39E /* NetworkService.swift in Sources */,
 				0976AB1B27DCA847004DE39E /* LeagueClassificationInteractor.swift in Sources */,
 				0976ABF827E8FEF5004DE39E /* TeamMatchesInteractor.swift in Sources */,
