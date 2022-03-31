@@ -35,6 +35,10 @@ struct RankingsView: View {
 
     var body: some View {
         VStack(spacing: 0){
+            Text("Season top players")
+                .font(.title2)
+                .fontWeight(.bold)
+                .padding(.bottom, 10)
             HStack(spacing: 0){
                 ForEach(optionsMenu, id: \.self){ item in
                     HStack(alignment: .center, spacing: 0, content: {
@@ -93,6 +97,11 @@ struct RankingsView: View {
 
             }
         }
+        .padding(.bottom, 80)
+        .padding(.top, 50)
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .edgesIgnoringSafeArea(.all)
         .onAppear {
             self.viewModel.fetchData()
         }

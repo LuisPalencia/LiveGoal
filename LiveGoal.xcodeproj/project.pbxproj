@@ -119,6 +119,12 @@
 		0976ACBB27F33278004DE39E /* PlayerTransfers.json in Resources */ = {isa = PBXBuildFile; fileRef = 0976ACBA27F33278004DE39E /* PlayerTransfers.json */; };
 		0976ACC027F333BE004DE39E /* PlayerTransferItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACBF27F333BE004DE39E /* PlayerTransferItem.swift */; };
 		0976ACC327F4A151004DE39E /* StandingLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACC227F4A151004DE39E /* StandingLeague.swift */; };
+		0976ACC627F60422004DE39E /* DDBB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACC527F60422004DE39E /* DDBB.swift */; };
+		0976ACCE27F6066B004DE39E /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACC927F6066B004DE39E /* FavouritesViewModel.swift */; };
+		0976ACCF27F6066B004DE39E /* FavouritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACCA27F6066B004DE39E /* FavouritesProvider.swift */; };
+		0976ACD027F6066B004DE39E /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACCB27F6066B004DE39E /* FavouritesView.swift */; };
+		0976ACD127F6066B004DE39E /* FavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACCC27F6066B004DE39E /* FavouritesCoordinator.swift */; };
+		0976ACD227F6066B004DE39E /* FavouritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACCD27F6066B004DE39E /* FavouritesInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -236,6 +242,12 @@
 		0976ACBA27F33278004DE39E /* PlayerTransfers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PlayerTransfers.json; sourceTree = "<group>"; };
 		0976ACBF27F333BE004DE39E /* PlayerTransferItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTransferItem.swift; sourceTree = "<group>"; };
 		0976ACC227F4A151004DE39E /* StandingLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingLeague.swift; sourceTree = "<group>"; };
+		0976ACC527F60422004DE39E /* DDBB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDBB.swift; sourceTree = "<group>"; };
+		0976ACC927F6066B004DE39E /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		0976ACCA27F6066B004DE39E /* FavouritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesProvider.swift; sourceTree = "<group>"; };
+		0976ACCB27F6066B004DE39E /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		0976ACCC27F6066B004DE39E /* FavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinator.swift; sourceTree = "<group>"; };
+		0976ACCD27F6066B004DE39E /* FavouritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +335,7 @@
 		0976AB0227DCA5EF004DE39E /* Utils+Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0976ACC527F60422004DE39E /* DDBB.swift */,
 				0976AB0327DCA5FB004DE39E /* Utils.swift */,
 				0976AB0727DCA612004DE39E /* Obfuscator.swift */,
 				0976AB0A27DCA650004DE39E /* Constants.swift */,
@@ -334,6 +347,7 @@
 		0976AB1027DCA799004DE39E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0976ACC827F6060E004DE39E /* FavouritesView */,
 				0976AC9927F216D9004DE39E /* TeamStatisticsView */,
 				0976AC7A27EF48DD004DE39E /* RankingsView */,
 				0976AC3127EB74FB004DE39E /* DetailMatchView */,
@@ -561,6 +575,18 @@
 			path = TeamStatisticsView;
 			sourceTree = "<group>";
 		};
+		0976ACC827F6060E004DE39E /* FavouritesView */ = {
+			isa = PBXGroup;
+			children = (
+				0976ACC927F6066B004DE39E /* FavouritesViewModel.swift */,
+				0976ACCA27F6066B004DE39E /* FavouritesProvider.swift */,
+				0976ACCB27F6066B004DE39E /* FavouritesView.swift */,
+				0976ACCC27F6066B004DE39E /* FavouritesCoordinator.swift */,
+				0976ACCD27F6066B004DE39E /* FavouritesInteractor.swift */,
+			);
+			path = FavouritesView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -662,10 +688,12 @@
 				0976AB1827DCA847004DE39E /* LeagueClassificationProvider.swift in Sources */,
 				0976AAE727DCA4C7004DE39E /* ContentView.swift in Sources */,
 				0976AC4527EB7B17004DE39E /* DetailMatchView.swift in Sources */,
+				0976ACC627F60422004DE39E /* DDBB.swift in Sources */,
 				0976AAFC27DCA593004DE39E /* NetworkError.swift in Sources */,
 				0976ABC327E33AA2004DE39E /* PlayerListItem.swift in Sources */,
 				0976ACA327F216F4004DE39E /* TeamStatisticsInteractor.swift in Sources */,
 				0976AC5027EB97D8004DE39E /* MatchLineupsServerModel.swift in Sources */,
+				0976ACD127F6066B004DE39E /* FavouritesCoordinator.swift in Sources */,
 				0976AC5C27EBA0B3004DE39E /* MatchStatisticsViewModel.swift in Sources */,
 				0976AAE527DCA4C7004DE39E /* LiveGoalApp.swift in Sources */,
 				0976ACC027F333BE004DE39E /* PlayerTransferItem.swift in Sources */,
@@ -706,6 +734,7 @@
 				0976ABE027E8F937004DE39E /* ButtonModifier.swift in Sources */,
 				0976ABCA27E39B04004DE39E /* PlayersCarrousel.swift in Sources */,
 				0976AC4327EB7B17004DE39E /* DetailMatchViewModel.swift in Sources */,
+				0976ACCF27F6066B004DE39E /* FavouritesProvider.swift in Sources */,
 				0976ABF727E8FEF5004DE39E /* TeamMatchesCoordinator.swift in Sources */,
 				0976ABCE27E39DD6004DE39E /* LoaderModifier.swift in Sources */,
 				0976AC4727EB7B17004DE39E /* DetailMatchInteractor.swift in Sources */,
@@ -714,6 +743,7 @@
 				0976AC4627EB7B17004DE39E /* DetailMatchCoordinator.swift in Sources */,
 				0976AC6627ED1675004DE39E /* EventsMatchView.swift in Sources */,
 				0976AB0B27DCA650004DE39E /* Constants.swift in Sources */,
+				0976ACCE27F6066B004DE39E /* FavouritesViewModel.swift in Sources */,
 				0976AC8427EF4990004DE39E /* RankingsInteractor.swift in Sources */,
 				0976AB3C27DE6E40004DE39E /* StandingTeamItem.swift in Sources */,
 				0976AC8127EF4990004DE39E /* RankingsProvider.swift in Sources */,
@@ -724,6 +754,7 @@
 				0976AB1927DCA847004DE39E /* LeagueClassificationView.swift in Sources */,
 				0976AC0127E91369004DE39E /* DetailPlayerViewModel.swift in Sources */,
 				0976AC0527E91369004DE39E /* DetailPlayerInteractor.swift in Sources */,
+				0976ACD027F6066B004DE39E /* FavouritesView.swift in Sources */,
 				0976AC4427EB7B17004DE39E /* DetailMatchProvider.swift in Sources */,
 				0976ABDD27E8E69C004DE39E /* TestView.swift in Sources */,
 				0976AC7027EE7B70004DE39E /* PlayerTrophiesServerModel.swift in Sources */,
@@ -739,6 +770,7 @@
 				0976AB4D27DFA3CD004DE39E /* TeamInfoServerModel.swift in Sources */,
 				0976AC1927EA4495004DE39E /* LeagueRoundsViewModel.swift in Sources */,
 				0976ABD627E8DE5B004DE39E /* HomeView.swift in Sources */,
+				0976ACD227F6066B004DE39E /* FavouritesInteractor.swift in Sources */,
 				0976ACA227F216F4004DE39E /* TeamStatisticsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

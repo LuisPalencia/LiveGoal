@@ -33,7 +33,12 @@ struct LeagueRoundsView: View {
     
     var body: some View {
         VStack(spacing: 20, content: {
+            Image("laliga_logo_color")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300, height: 35)
             HStack{
+                
                 Text("Round \(roundSelected)")
                     .font(.title2).fontWeight(.bold)
                     .onReceive(self.viewModel.$dataCurrentLeagueRound) { currentRound in
@@ -52,13 +57,6 @@ struct LeagueRoundsView: View {
             
             ScrollView{
                 VStack{
-//                    if let matchesUnw = self.viewModel.dataMatchesLeague[roundSelected] {
-//                        MatchesList(matches: matchesUnw)
-//                    }else{
-//                        Text("There are no matches for this round")
-//                            .font(.title)
-//                            .fontWeight(.bold)
-//                    }
                     
                     if let matchesUnw = self.viewModel.getMatchesRoundSorted(round: roundSelected){
                         MatchesList(matches: matchesUnw)
@@ -72,6 +70,11 @@ struct LeagueRoundsView: View {
                 }
             }
         })
+        .padding(.bottom, 80)
+        .padding(.top, 50)
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .edgesIgnoringSafeArea(.all)
         .onAppear {
             self.viewModel.fetchData()
         }

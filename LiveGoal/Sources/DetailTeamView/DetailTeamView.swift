@@ -28,7 +28,7 @@ import SwiftUI
 struct DetailTeamView: View {
     @StateObject var viewModel = DetailTeamViewModel()
     //var viewModel: ResponseTeamInfo = TeamInfoServerModel.stubbedTeamInfo
-    @SwiftUI.Environment(\.presentationMode) var presenterMode
+    //@SwiftUI.Environment(\.presentationMode) var presenterMode
     
     var body: some View {
         ScrollView{
@@ -60,9 +60,10 @@ struct DetailTeamView: View {
                 }
             }
         }
-        //.navigationBarHidden(true)
+        .padding(.bottom, 80)
+        //.padding(.top, 50)
         //.navigationBarBackButtonHidden(true)
-        //.edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(.all)
         .onAppear {
             self.viewModel.fetchData()
             self.viewModel.fetchDataTeamPlayers()
@@ -91,15 +92,16 @@ struct DetailTeamView: View {
             
             
             HStack{
-                Button(action: {
-                    self.presenterMode.wrappedValue.dismiss()
-                }, label: {
-                    Image(systemName: "chevron.left")
-                })
-                .padding()
-                .background(Color.white.opacity(0.7))
-                .clipShape(Circle())
-                .padding(EdgeInsets(top: 40, leading: 20, bottom: 0, trailing: 0))
+//                Button(action: {
+//                    self.presenterMode.wrappedValue.dismiss()
+//                }, label: {
+//                    Image(systemName: "chevron.left")
+//                })
+//                .padding()
+//                .background(Color.white.opacity(0.7))
+//                .clipShape(Circle())
+//                .padding(EdgeInsets(top: 40, leading: 20, bottom: 0, trailing: 0))
+                Spacer()
                 
                 Spacer()
                 
