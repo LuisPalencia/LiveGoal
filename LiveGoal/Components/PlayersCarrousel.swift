@@ -110,7 +110,8 @@ struct PlayerCell: View {
             Text(self.model.name ?? "")
                 .fontWeight(.semibold)
                 .lineLimit(1)
-                .fixedSize(horizontal: true, vertical: false)
+                .frame(width: 150)
+                //.fixedSize(horizontal: true, vertical: false)
                 
         })
         .padding([.leading, .trailing], 10)
