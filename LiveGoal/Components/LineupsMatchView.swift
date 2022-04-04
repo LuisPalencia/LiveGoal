@@ -59,26 +59,32 @@ struct LineupsMatchView: View {
                 HStack(alignment: .top, spacing: 0, content: {
                     VStack(spacing: 10, content: {
                         ForEach(0..<self.homeTitularPlayersCount, id: \.self){ item in
-                            LineupHomeTeamItem(player: matchLineupHome.startXI?[item])
-                                //.background((item % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.1))
                             
-//                            NavigationLink(
-//                                destination: DetailPlayerCoordinator.view(dto: DetailPlayerCoordinatorDTO(player: matchLineupHome.startXI?[item].player?.id ?? 0,
-//                                                                                                          idTeam: matchLineupHome.team?.id ?? 0,
-//                                                                                                          season: season,
-//                                                                                                          idLeague: Constants.laLigaId)),
-//                                label: {
-//                                    LineupHomeTeamItem(player: matchLineupHome.startXI?[item])
-//                                })
-//                                .buttonStyle(PlainButtonStyle())
+                            NavigationLink(
+                                destination: DetailPlayerCoordinator.view(dto: DetailPlayerCoordinatorDTO(idPlayer: matchLineupHome.startXI?[item].player?.id ?? 0,
+                                                                                                          idTeam: matchLineupHome.team?.id ?? 0,
+                                                                                                          season: season,
+                                                                                                          idLeague: Constants.laLigaId)),
+                                label: {
+                                    LineupHomeTeamItem(player: matchLineupHome.startXI?[item])
+                                })
+                                .buttonStyle(PlainButtonStyle())
                             
                         }
                     })
                                         
                     VStack(spacing: 10, content: {
                         ForEach(0..<self.awayTitularPlayersCount, id: \.self){ item in
-                            LineupAwayTeamItem(player: matchLineupAway.startXI?[item])
-                                //.background((item % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.1))
+                                
+                            NavigationLink(
+                                destination: DetailPlayerCoordinator.view(dto: DetailPlayerCoordinatorDTO(idPlayer: matchLineupAway.startXI?[item].player?.id ?? 0,
+                                                                                                          idTeam: matchLineupAway.team?.id ?? 0,
+                                                                                                          season: season,
+                                                                                                          idLeague: Constants.laLigaId)),
+                                label: {
+                                    LineupAwayTeamItem(player: matchLineupAway.startXI?[item])
+                                })
+                                .buttonStyle(PlainButtonStyle())
                         }
                     })
                     
@@ -93,15 +99,32 @@ struct LineupsMatchView: View {
                 HStack(alignment: .top, spacing: 0, content: {
                     VStack(spacing: 10, content: {
                         ForEach(0..<self.homeSubstitutePlayersCount, id: \.self){ item in
-                            LineupHomeTeamItem(player: matchLineupHome.substitutes?[item])
-                                //.background((item % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.1))
+                                                        
+                            NavigationLink(
+                                destination: DetailPlayerCoordinator.view(dto: DetailPlayerCoordinatorDTO(idPlayer: matchLineupHome.substitutes?[item].player?.id ?? 0,
+                                                                                                          idTeam: matchLineupHome.team?.id ?? 0,
+                                                                                                          season: season,
+                                                                                                          idLeague: Constants.laLigaId)),
+                                label: {
+                                    LineupHomeTeamItem(player: matchLineupHome.substitutes?[item])
+                                })
+                                .buttonStyle(PlainButtonStyle())
+                            
                         }
                     })
                                         
                     VStack(spacing: 10, content: {
                         ForEach(0..<self.awaySubstitutePlayersCount, id: \.self){ item in
-                            LineupAwayTeamItem(player: matchLineupAway.substitutes?[item])
-                                //.background((item % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.1))
+                                                        
+                            NavigationLink(
+                                destination: DetailPlayerCoordinator.view(dto: DetailPlayerCoordinatorDTO(idPlayer: matchLineupAway.substitutes?[item].player?.id ?? 0,
+                                                                                                          idTeam: matchLineupAway.team?.id ?? 0,
+                                                                                                          season: season,
+                                                                                                          idLeague: Constants.laLigaId)),
+                                label: {
+                                    LineupAwayTeamItem(player: matchLineupAway.substitutes?[item])
+                                })
+                                .buttonStyle(PlainButtonStyle())
                         }
                     })
                 })

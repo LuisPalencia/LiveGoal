@@ -68,28 +68,79 @@ struct RankingsView: View {
                 VStack(spacing: 0, content: {
                     if optionSelected == "Goals" {
                         if self.viewModel.dataTopPlayerScorers.count > 0 {
-                            FirstPlayerRankingView(model: self.viewModel.dataTopPlayerScorers[0], valueRanking: self.viewModel.dataTopPlayerScorers[0].goals?.total ?? 0, backgroundColor: Color.blue.opacity(0.7))
-                            RankingPlayerList(modelTopPlayers: self.viewModel.getTopPlayersFromSecond(type: .Goals), rankingType: .Goals, startPosition: 2)
+                            
+                            NavigationLink(
+                                destination: DetailPlayerCoordinator.view(
+                                    dto: DetailPlayerCoordinatorDTO(
+                                        idPlayer: self.viewModel.dataTopPlayerScorers[0].id ?? 0,
+                                        idTeam: self.viewModel.dataTopPlayerScorers[0].teamId ?? 0,
+                                        season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0,
+                                        idLeague: Constants.laLigaId)),
+                                label: {
+                                    FirstPlayerRankingView(model: self.viewModel.dataTopPlayerScorers[0], valueRanking: self.viewModel.dataTopPlayerScorers[0].goals?.total ?? 0, backgroundColor: Color.blue.opacity(0.7))
+                                })
+                                .buttonStyle(PlainButtonStyle())
+                            
+                            RankingPlayerList(modelTopPlayers: self.viewModel.getTopPlayersFromSecond(type: .Goals), rankingType: .Goals, startPosition: 2, season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0)
                         }
                         
                     } else if optionSelected == "Assists" {
                         
                         if self.viewModel.dataTopPlayerAssists.count > 0 {
-                            FirstPlayerRankingView(model: self.viewModel.dataTopPlayerAssists[0], valueRanking: self.viewModel.dataTopPlayerAssists[0].goals?.assists ?? 0, backgroundColor: Color.orange)
-                            RankingPlayerList(modelTopPlayers: self.viewModel.getTopPlayersFromSecond(type: .Assists), rankingType: .Assists, startPosition: 2)
+                            
+                            NavigationLink(
+                                destination: DetailPlayerCoordinator.view(
+                                    dto: DetailPlayerCoordinatorDTO(
+                                        idPlayer: self.viewModel.dataTopPlayerAssists[0].id ?? 0,
+                                        idTeam: self.viewModel.dataTopPlayerAssists[0].teamId ?? 0,
+                                        season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0,
+                                        idLeague: Constants.laLigaId)),
+                                label: {
+                                    FirstPlayerRankingView(model: self.viewModel.dataTopPlayerAssists[0], valueRanking: self.viewModel.dataTopPlayerAssists[0].goals?.assists ?? 0, backgroundColor: Color.orange)
+                                })
+                                .buttonStyle(PlainButtonStyle())
+                            
+                            
+                            RankingPlayerList(modelTopPlayers: self.viewModel.getTopPlayersFromSecond(type: .Assists), rankingType: .Assists, startPosition: 2, season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0)
                         }
                             
                     } else if optionSelected == "Yellow cards" {
                         
                         if self.viewModel.dataTopPlayerYellowCards.count > 0 {
-                            FirstPlayerRankingView(model: self.viewModel.dataTopPlayerYellowCards[0], valueRanking: (self.viewModel.dataTopPlayerYellowCards[0].cards?.yellow ?? 0) + (self.viewModel.dataTopPlayerYellowCards[0].cards?.yellowred ?? 0), backgroundColor: Color.yellow)
-                            RankingPlayerList(modelTopPlayers: self.viewModel.getTopPlayersFromSecond(type: .YellowCards), rankingType: .YellowCards, startPosition: 2)
+                            
+                            NavigationLink(
+                                destination: DetailPlayerCoordinator.view(
+                                    dto: DetailPlayerCoordinatorDTO(
+                                        idPlayer: self.viewModel.dataTopPlayerYellowCards[0].id ?? 0,
+                                        idTeam: self.viewModel.dataTopPlayerYellowCards[0].teamId ?? 0,
+                                        season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0,
+                                        idLeague: Constants.laLigaId)),
+                                label: {
+                                    FirstPlayerRankingView(model: self.viewModel.dataTopPlayerYellowCards[0], valueRanking: (self.viewModel.dataTopPlayerYellowCards[0].cards?.yellow ?? 0) + (self.viewModel.dataTopPlayerYellowCards[0].cards?.yellowred ?? 0), backgroundColor: Color.yellow)
+                                })
+                                .buttonStyle(PlainButtonStyle())
+                            
+                            
+                            RankingPlayerList(modelTopPlayers: self.viewModel.getTopPlayersFromSecond(type: .YellowCards), rankingType: .YellowCards, startPosition: 2, season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0)
                         }
                         
                     } else {
                         if self.viewModel.dataTopPlayerRedCards.count > 0 {
-                            FirstPlayerRankingView(model: self.viewModel.dataTopPlayerRedCards[0], valueRanking: self.viewModel.dataTopPlayerRedCards[0].cards?.red ?? 0, backgroundColor: Color.red)
-                            RankingPlayerList(modelTopPlayers: self.viewModel.getTopPlayersFromSecond(type: .RedCards), rankingType: .RedCards, startPosition: 2)
+                            
+                            NavigationLink(
+                                destination: DetailPlayerCoordinator.view(
+                                    dto: DetailPlayerCoordinatorDTO(
+                                        idPlayer: self.viewModel.dataTopPlayerRedCards[0].id ?? 0,
+                                        idTeam: self.viewModel.dataTopPlayerRedCards[0].teamId ?? 0,
+                                        season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0,
+                                        idLeague: Constants.laLigaId)),
+                                label: {
+                                    FirstPlayerRankingView(model: self.viewModel.dataTopPlayerRedCards[0], valueRanking: self.viewModel.dataTopPlayerRedCards[0].cards?.red ?? 0, backgroundColor: Color.red)
+                                })
+                                .buttonStyle(PlainButtonStyle())
+                            
+                            
+                            RankingPlayerList(modelTopPlayers: self.viewModel.getTopPlayersFromSecond(type: .RedCards), rankingType: .RedCards, startPosition: 2, season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0)
                         }
                         
                     }

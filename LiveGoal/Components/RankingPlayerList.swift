@@ -13,13 +13,23 @@ struct RankingPlayerList: View {
     var modelTopPlayers:  [PlayerDetailStatisticsModelView]
     var rankingType: RankingTypes = .Goals
     var startPosition: Int = 1
+    var season: Int = 0
     
     
     var body: some View {
         VStack(spacing: 0, content: {
             ForEach(0..<self.modelTopPlayers.count, id: \.self){ item in
-                RankingPlayerCell(model: modelTopPlayers[item], position: item + self.startPosition, rankingType: rankingType)
-                    .background((item % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.05))
+                NavigationLink(
+                    destination: DetailPlayerCoordinator.view(dto: DetailPlayerCoordinatorDTO(idPlayer: modelTopPlayers[item].id ?? 0,
+                                                                                              idTeam: modelTopPlayers[item].teamId ?? 0,
+                                                                                              season: self.season,
+                                                                                              idLeague: Constants.laLigaId)),
+                    label: {
+                        RankingPlayerCell(model: modelTopPlayers[item], position: item + self.startPosition, rankingType: rankingType)
+                            .background((item % 2) == 1 ? Color.white.opacity(1) : Color.black.opacity(0.05))
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                
             }
         })
         
