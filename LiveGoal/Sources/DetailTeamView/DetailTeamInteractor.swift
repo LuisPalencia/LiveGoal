@@ -30,6 +30,8 @@ protocol DetailTeamInteractorInputProtocol: BaseInteractorInputProtocol {
     func fetchDataTeamInfoProvider()
     func fetchDataTeamPlayersProvider()
     func getCurrentSeason() -> Int
+    func saveDataAsFavouriteInteractor(name: String, logo: String)
+    func removeDataAsFavouriteInteractor(name: String, logo: String)
 }
 
 // Output Provider
@@ -94,13 +96,23 @@ extension DetailTeamInteractor: DetailTeamInteractorInputProtocol {
     func fetchDataTeamPlayersProvider() {
         self.provider?.fetchDataTeamPlayersProvider()
     }
+    
+    func getCurrentSeason() -> Int{
+        return provider?.getCurrentSeason() ?? 0
+    }
+    
+    func saveDataAsFavouriteInteractor(name: String, logo: String) {
+        self.provider?.saveDataAsFavouriteProvider(name: name, logo: logo)
+    }
+    
+    func removeDataAsFavouriteInteractor(name: String, logo: String) {
+        self.provider?.removeDataAsFavouriteProvider(name: name, logo: logo)
+    }
 }
 
 // Output Provider
 extension DetailTeamInteractor: DetailTeamProviderOutputProtocol{
-    func getCurrentSeason() -> Int{
-        return provider?.getCurrentSeason() ?? 0
-    }
+    
     
     func setInformationTeam(completion: Result<TeamInfoServerModel?, NetworkError>) {
         switch completion {

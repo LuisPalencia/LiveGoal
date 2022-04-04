@@ -72,7 +72,7 @@ struct DetailTeamView: View {
     }
     
     var headerView: some View{
-        ZStack(alignment: .top, content: {
+        ZStack(alignment: .center, content: {
             if self.viewModel.dataTeamInfo?.venue?.imageUrl != nil {
                 StadiumImageTest(imageStadiumUrl: (self.viewModel.dataTeamInfo?.venue?.imageUrl)!)
             }
@@ -88,7 +88,7 @@ struct DetailTeamView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
             })
-            .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
+            //.padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
             
             
             HStack{
@@ -107,13 +107,14 @@ struct DetailTeamView: View {
                 
                 Button(action: {
                     // Aqui salvaremos las peliculas como favoritas en una BBDD (1. Firebase | 2. UserDefault)
+                    self.viewModel.saveTeamAsFavourite()
                 }, label: {
-                    Image(systemName: "bookmark")
+                    Image(systemName: self.viewModel.isTeamFavourite ? "heart.fill" : "heart")
                 })
                 .padding()
                 .background(Color.white.opacity(0.7))
                 .clipShape(Circle())
-                .padding(EdgeInsets(top: 40, leading: 0, bottom: 0, trailing: 20))
+                .padding(EdgeInsets(top: 180, leading: 0, bottom: 0, trailing: 20))
             }
             .foregroundColor(Color.red)
             
@@ -281,9 +282,9 @@ struct TeamPlayersView: View {
 }
 
 
-//struct DetailTeamView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailTeamView()
-//    }
-//}
+struct DetailTeamView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailTeamView()
+    }
+}
 

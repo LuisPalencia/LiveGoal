@@ -31,6 +31,8 @@ protocol DetailTeamProviderInputProtocol: BaseProviderInputProtocol {
     func fetchDataTeamInfoProvider()
     func fetchDataTeamPlayersProvider()
     func getCurrentSeason() -> Int
+    func saveDataAsFavouriteProvider(name: String, logo: String)
+    func removeDataAsFavouriteProvider(name: String, logo: String)
 }
 
 final class DetailTeamProvider: BaseProvider{
@@ -88,6 +90,26 @@ extension DetailTeamProvider: DetailTeamProviderInputProtocol{
             }
             .store(in: &cancellable)
     }
+    
+    func saveDataAsFavouriteProvider(name: String, logo: String) {
+        DDBB.shared.addLocal(favorite: DownloadNewModel(pId: "\(self.dataDTO?.idTeam ?? 0)", pName: name, pLogo: logo)) { result in
+            debugPrint("Equipo \(self.dataDTO?.idTeam ?? 0) salvado correctamente")
+        } failure: { error in
+            debugPrint("Equipo \(self.dataDTO?.idTeam ?? 0) no se ha podido guardar")
+        }
+
+    }
+    
+    func removeDataAsFavouriteProvider(name: String, logo: String) {
+        let team = DownloadNewModel(pId: "\(self.dataDTO?.idTeam ?? 0)", pName: name, pLogo: logo)
+        
+        DDBB.shared.deleteLocal(favorite: team) { result in
+            debugPrint("Equipo \(self.dataDTO?.idTeam ?? 0) eliminado correctamente")
+        } failure: { error in
+            debugPrint("Equipo \(self.dataDTO?.idTeam ?? 0) no se ha podido eliminar")
+        }
+    }
+    
  
     
 }

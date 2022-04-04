@@ -466,5 +466,181 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37EC14F3-78DF-4BB3-AD5A-78ABD4095241"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveGoal/Sources/FavouritesView/FavouritesProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "fetchDataFromDBProvider()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "009F9AF0-E5E4-457E-ACD4-56BF6C3ADA8B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveGoal/Sources/DetailTeamView/DetailTeamViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "saveTeamAsFavourite()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC9EAD95-1913-422E-ADEE-51BFE73AE772"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveGoal/Sources/DetailTeamView/DetailTeamProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "saveDataAsFavouriteProvider(name:logo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FC9EAD95-1913-422E-ADEE-51BFE73AE772 - 7700a769f29e93f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LiveGoal.DetailTeamProvider.saveDataAsFavouriteProvider(name: Swift.String, logo: Swift.String) -&gt; ()"
+                  moduleName = "LiveGoal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CICE/Documents/LP/Curso%20iOS%202022/Projects/PFM/LiveGoal/LiveGoal/Sources/DetailTeamView/DetailTeamProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "214">
+               </Location>
+               <Location
+                  uuid = "FC9EAD95-1913-422E-ADEE-51BFE73AE772 - 7bd5a551dcb3a95f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;LiveGoal.DownloadNewModel&gt;) -&gt; () in LiveGoal.DetailTeamProvider.saveDataAsFavouriteProvider(name: Swift.String, logo: Swift.String) -&gt; ()"
+                  moduleName = "LiveGoal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CICE/Documents/LP/Curso%20iOS%202022/Projects/PFM/LiveGoal/LiveGoal/Sources/DetailTeamView/DetailTeamProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "130">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CCF9CDE7-6166-4301-8E3D-E28535899216"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveGoal/Sources/DetailTeamView/DetailTeamViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "saveTeamAsFavourite()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D94919A3-BACE-433F-B39A-84E6812E1DE6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveGoal/Sources/FavouritesView/FavouritesProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "fetchDataFromDBProvider()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0795AFD-ED84-4332-94A3-F7BE96221E44"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveGoal/Sources/FavouritesView/FavouritesProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "fetchDataFromDBProvider()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC716C49-58BE-46FE-AB5C-AA1EEDF90A8D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveGoal/Sources/FavouritesView/FavouritesProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "fetchDataFromDBProvider()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CC716C49-58BE-46FE-AB5C-AA1EEDF90A8D - 9b06c70c4e1fd5ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;LiveGoal.DownloadNewModels&gt;) -&gt; () in LiveGoal.FavouritesProvider.fetchDataFromDBProvider() -&gt; ()"
+                  moduleName = "LiveGoal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CICE/Documents/LP/Curso%20iOS%202022/Projects/PFM/LiveGoal/LiveGoal/Sources/FavouritesView/FavouritesProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "83">
+               </Location>
+               <Location
+                  uuid = "CC716C49-58BE-46FE-AB5C-AA1EEDF90A8D - c760059a794e314c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;LiveGoal.DownloadNewModel&gt;) -&gt; () in closure #1 (Swift.Optional&lt;LiveGoal.DownloadNewModels&gt;) -&gt; () in LiveGoal.FavouritesProvider.fetchDataFromDBProvider() -&gt; ()"
+                  moduleName = "LiveGoal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CICE/Documents/LP/Curso%20iOS%202022/Projects/PFM/LiveGoal/LiveGoal/Sources/FavouritesView/FavouritesProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -36,7 +36,7 @@ struct HomeView: View {
         case .top:
             RankingsCoordinator.navigation()
         case .favourites:
-            LeagueClassificationCoordinator.navigation()
+            FavouritesCoordinator.navigation()
         case .profile:
             ProfileView()
         }

@@ -51,6 +51,7 @@ final class DetailTeamViewModel: BaseViewModel, ObservableObject {
     @Published var dataTeamPlayersMidfielders: [Player] = []
     @Published var dataTeamPlayersAttackers: [Player] = []
     @Published var dataTeamPlayersUnknown: [Player] = []
+    @Published var isTeamFavourite = false
     
     // MARK: - Metodospublicos
     func fetchData(){
@@ -58,11 +59,23 @@ final class DetailTeamViewModel: BaseViewModel, ObservableObject {
     }
     
     func fetchDataTeamPlayers(){
-        self.interactor?.fetchDataTeamPlayersProvider()
+        //self.interactor?.fetchDataTeamPlayersProvider()
     }
     
     func getCurrentSeason() -> Int{
         return self.interactor?.getCurrentSeason() ?? 0
+    }
+    
+    func saveTeamAsFavourite(){
+        if !self.isTeamFavourite {
+            self.interactor?.saveDataAsFavouriteInteractor(name: self.dataTeamInfo?.team?.name ?? "", logo: self.dataTeamInfo?.team?.logo ?? "")
+            self.isTeamFavourite = true
+        }else{
+            self.interactor?.removeDataAsFavouriteInteractor(name: self.dataTeamInfo?.team?.name ?? "", logo: self.dataTeamInfo?.team?.logo ?? "")
+            self.isTeamFavourite = false
+        }
+        
+        
     }
 }
 
@@ -74,6 +87,18 @@ extension DetailTeamViewModel: DetailTeamInteractorOutputProtocol {
             return
         }
         self.dataTeamInfo = dataUnw
+        DDBB.shared.getAllLocal { result in
+            result?.downloads.map{ item in
+                item.map{ itemX in
+                    if "\(self.dataTeamInfo?.team?.id ?? 0)" == itemX.id {
+                        self.isTeamFavourite = true
+                    }
+                }
+            }
+        } failure: { error in
+            debugPrint(error ?? "")
+        }
+
     }
     
 //    func setInformationTeamPlayers(data: [Player]?) {
