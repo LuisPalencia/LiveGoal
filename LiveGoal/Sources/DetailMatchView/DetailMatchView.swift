@@ -39,36 +39,36 @@ struct DetailMatchView: View {
     
 
     var body: some View {
-        VStack{
-            if let matchUnw = self.viewModel.match {
-                HeaderDetailMatch(match: matchUnw)
-            }
-            
-            HStack(spacing: 0){
-                ForEach(optionsMenu, id: \.self){ item in
-                    HStack(alignment: .center, spacing: 0, content: {
-                        Button(action: {
-                            self.optionSelected = item
-                        }, label: {
-                            VStack{
-                                Text(item)
-                                    .font(Font.system(size: 18, weight: .semibold))
-                                    .padding(EdgeInsets(top: 10, leading: 3, bottom: 10, trailing: 15))
-                                Rectangle()
-                                    .fill(self.optionSelected == item ? Color.green : Color.black)
-                                    .frame(height: 3)
-                            }
-                            
-                        })
-                        .foregroundColor(self.optionSelected == item ? .green : .black)
-                        //.background(self.optionSelected == item ? Color.black : Color.clear)
-                        .cornerRadius(10)
-                    })
-                    .padding([.leading, .trailing], -8)
+        ScrollView{
+            VStack{
+                if let matchUnw = self.viewModel.match {
+                    HeaderDetailMatch(match: matchUnw)
                 }
-            }
-
-            ScrollView{
+                
+                HStack(spacing: 0){
+                    ForEach(optionsMenu, id: \.self){ item in
+                        HStack(alignment: .center, spacing: 0, content: {
+                            Button(action: {
+                                self.optionSelected = item
+                            }, label: {
+                                VStack{
+                                    Text(item)
+                                        .font(Font.system(size: 18, weight: .semibold))
+                                        .padding(EdgeInsets(top: 10, leading: 3, bottom: 10, trailing: 15))
+                                    Rectangle()
+                                        .fill(self.optionSelected == item ? Color.green : Color.black)
+                                        .frame(height: 3)
+                                }
+                                
+                            })
+                            .foregroundColor(self.optionSelected == item ? .green : .black)
+                            //.background(self.optionSelected == item ? Color.black : Color.clear)
+                            .cornerRadius(10)
+                        })
+                        .padding([.leading, .trailing], -8)
+                    }
+                }
+                
                 if optionSelected == "Statistics"{
                     statistics
                 }else if optionSelected == "Events" {
@@ -77,9 +77,8 @@ struct DetailMatchView: View {
                     lineups
                 }
             }
-            
-            
         }
+        //.edgesIgnoringSafeArea(.all)
         .onAppear {
             self.viewModel.fetchData()
         }
@@ -260,7 +259,7 @@ struct HeaderDetailMatch: View {
                 .padding(.trailing, 10)
             }
         })
-        .padding([.top, .bottom], 10)
+        .padding([.bottom], 10)
     }
 }
 
