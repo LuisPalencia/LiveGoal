@@ -133,7 +133,6 @@
 		0976ACEA27FC69F1004DE39E /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE527FC69F0004DE39E /* LoginProvider.swift */; };
 		0976ACEC27FC69F1004DE39E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE727FC69F1004DE39E /* LoginCoordinator.swift */; };
 		0976ACED27FC69F1004DE39E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE827FC69F1004DE39E /* LoginInteractor.swift */; };
-		0976ACF327FC77D5004DE39E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0976ACF227FC77D5004DE39E /* GoogleService-Info.plist */; };
 		0976ACF827FC79A8004DE39E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0976ACF727FC79A8004DE39E /* FirebaseAuth */; };
 		0976ACFA27FC79A8004DE39E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0976ACF927FC79A8004DE39E /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
@@ -267,7 +266,6 @@
 		0976ACE527FC69F0004DE39E /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		0976ACE727FC69F1004DE39E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		0976ACE827FC69F1004DE39E /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
-		0976ACF227FC77D5004DE39E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,7 +300,6 @@
 		0976AAE327DCA4C7004DE39E /* LiveGoal */ = {
 			isa = PBXGroup;
 			children = (
-				0976ACF227FC77D5004DE39E /* GoogleService-Info.plist */,
 				0976ABCC27E39DBA004DE39E /* ViewModifiers */,
 				0976ABBA27E268E4004DE39E /* Models */,
 				0976AB3927DE6DC1004DE39E /* Components */,
@@ -701,7 +698,6 @@
 				0976ABAC27E2473C004DE39E /* TeamPlayers.json in Resources */,
 				0976AC5927EB98D6004DE39E /* MatchLineups.json in Resources */,
 				0976AC1027E9E406004DE39E /* DetailPlayer.json in Resources */,
-				0976ACF327FC77D5004DE39E /* GoogleService-Info.plist in Resources */,
 				0976AB5027DFB561004DE39E /* TeamInfo.json in Resources */,
 				0976AB3327DE605C004DE39E /* LeagueStanding.json in Resources */,
 				0976AC5327EB98B7004DE39E /* MatchStatistics.json in Resources */,
