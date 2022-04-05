@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -126,6 +126,16 @@
 		0976ACD127F6066B004DE39E /* FavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACCC27F6066B004DE39E /* FavouritesCoordinator.swift */; };
 		0976ACD227F6066B004DE39E /* FavouritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACCD27F6066B004DE39E /* FavouritesInteractor.swift */; };
 		0976ACD627FB0888004DE39E /* FavouriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACD527FB0888004DE39E /* FavouriteItem.swift */; };
+		0976ACDA27FB5A22004DE39E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACD927FB5A22004DE39E /* LoginView.swift */; };
+		0976ACDE27FB6272004DE39E /* ButtonLoginModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACDD27FB6272004DE39E /* ButtonLoginModifier.swift */; };
+		0976ACE127FB652B004DE39E /* TextFieldLoginModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE027FB652B004DE39E /* TextFieldLoginModifier.swift */; };
+		0976ACE927FC69F1004DE39E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE427FC69F0004DE39E /* LoginViewModel.swift */; };
+		0976ACEA27FC69F1004DE39E /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE527FC69F0004DE39E /* LoginProvider.swift */; };
+		0976ACEC27FC69F1004DE39E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE727FC69F1004DE39E /* LoginCoordinator.swift */; };
+		0976ACED27FC69F1004DE39E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE827FC69F1004DE39E /* LoginInteractor.swift */; };
+		0976ACF327FC77D5004DE39E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0976ACF227FC77D5004DE39E /* GoogleService-Info.plist */; };
+		0976ACF827FC79A8004DE39E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0976ACF727FC79A8004DE39E /* FirebaseAuth */; };
+		0976ACFA27FC79A8004DE39E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0976ACF927FC79A8004DE39E /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -250,6 +260,14 @@
 		0976ACCC27F6066B004DE39E /* FavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinator.swift; sourceTree = "<group>"; };
 		0976ACCD27F6066B004DE39E /* FavouritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesInteractor.swift; sourceTree = "<group>"; };
 		0976ACD527FB0888004DE39E /* FavouriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteItem.swift; sourceTree = "<group>"; };
+		0976ACD927FB5A22004DE39E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0976ACDD27FB6272004DE39E /* ButtonLoginModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoginModifier.swift; sourceTree = "<group>"; };
+		0976ACE027FB652B004DE39E /* TextFieldLoginModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLoginModifier.swift; sourceTree = "<group>"; };
+		0976ACE427FC69F0004DE39E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0976ACE527FC69F0004DE39E /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		0976ACE727FC69F1004DE39E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		0976ACE827FC69F1004DE39E /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		0976ACF227FC77D5004DE39E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +275,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0976ACF827FC79A8004DE39E /* FirebaseAuth in Frameworks */,
+				0976ACFA27FC79A8004DE39E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +302,7 @@
 		0976AAE327DCA4C7004DE39E /* LiveGoal */ = {
 			isa = PBXGroup;
 			children = (
+				0976ACF227FC77D5004DE39E /* GoogleService-Info.plist */,
 				0976ABCC27E39DBA004DE39E /* ViewModifiers */,
 				0976ABBA27E268E4004DE39E /* Models */,
 				0976AB3927DE6DC1004DE39E /* Components */,
@@ -349,6 +370,7 @@
 		0976AB1027DCA799004DE39E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0976ACD827FB5A0C004DE39E /* LoginView */,
 				0976ACC827F6060E004DE39E /* FavouritesView */,
 				0976AC9927F216D9004DE39E /* TeamStatisticsView */,
 				0976AC7A27EF48DD004DE39E /* RankingsView */,
@@ -485,6 +507,8 @@
 			children = (
 				0976ABCD27E39DD6004DE39E /* LoaderModifier.swift */,
 				0976ABDF27E8F937004DE39E /* ButtonModifier.swift */,
+				0976ACDD27FB6272004DE39E /* ButtonLoginModifier.swift */,
+				0976ACE027FB652B004DE39E /* TextFieldLoginModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -590,6 +614,18 @@
 			path = FavouritesView;
 			sourceTree = "<group>";
 		};
+		0976ACD827FB5A0C004DE39E /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				0976ACD927FB5A22004DE39E /* LoginView.swift */,
+				0976ACE427FC69F0004DE39E /* LoginViewModel.swift */,
+				0976ACE527FC69F0004DE39E /* LoginProvider.swift */,
+				0976ACE727FC69F1004DE39E /* LoginCoordinator.swift */,
+				0976ACE827FC69F1004DE39E /* LoginInteractor.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -606,6 +642,10 @@
 			dependencies = (
 			);
 			name = LiveGoal;
+			packageProductDependencies = (
+				0976ACF727FC79A8004DE39E /* FirebaseAuth */,
+				0976ACF927FC79A8004DE39E /* FirebaseFirestore */,
+			);
 			productName = FootballApp;
 			productReference = 0976AAE127DCA4C7004DE39E /* LiveGoal.app */;
 			productType = "com.apple.product-type.application";
@@ -633,6 +673,9 @@
 				Base,
 			);
 			mainGroup = 0976AAD827DCA4C7004DE39E;
+			packageReferences = (
+				0976ACF627FC79A8004DE39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0976AAE227DCA4C7004DE39E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -658,6 +701,7 @@
 				0976ABAC27E2473C004DE39E /* TeamPlayers.json in Resources */,
 				0976AC5927EB98D6004DE39E /* MatchLineups.json in Resources */,
 				0976AC1027E9E406004DE39E /* DetailPlayer.json in Resources */,
+				0976ACF327FC77D5004DE39E /* GoogleService-Info.plist in Resources */,
 				0976AB5027DFB561004DE39E /* TeamInfo.json in Resources */,
 				0976AB3327DE605C004DE39E /* LeagueStanding.json in Resources */,
 				0976AC5327EB98B7004DE39E /* MatchStatistics.json in Resources */,
@@ -686,6 +730,7 @@
 				0976ACA127F216F4004DE39E /* TeamStatisticsView.swift in Sources */,
 				0976ABB827E26820004DE39E /* MatchStatus.swift in Sources */,
 				0976AB4927DF973E004DE39E /* DetailTeamInteractor.swift in Sources */,
+				0976ACEA27FC69F1004DE39E /* LoginProvider.swift in Sources */,
 				0976ABA027E20E27004DE39E /* MatchResult.swift in Sources */,
 				0976AC6927EE2DF6004DE39E /* MatchStatisticTypes.swift in Sources */,
 				0976AB1827DCA847004DE39E /* LeagueClassificationProvider.swift in Sources */,
@@ -713,6 +758,7 @@
 				0976ABBD27E273D6004DE39E /* MatchesList.swift in Sources */,
 				0976ACB327F32E78004DE39E /* PlayerTransfersServerModel.swift in Sources */,
 				0976AB1727DCA847004DE39E /* LeagueClassificationViewModel.swift in Sources */,
+				0976ACDA27FB5A22004DE39E /* LoginView.swift in Sources */,
 				0976AB2627DCBF96004DE39E /* CurrentSeasonLeagueModelView.swift in Sources */,
 				0976AC4A27EB9489004DE39E /* MatchStatisticsServerModel.swift in Sources */,
 				0976AB1A27DCA847004DE39E /* LeagueClassificationCoordinator.swift in Sources */,
@@ -729,9 +775,11 @@
 				0976ABAF27E2480C004DE39E /* TeamViewModel.swift in Sources */,
 				0976AB4527DF973E004DE39E /* DetailTeamViewModel.swift in Sources */,
 				0976AB4627DF973E004DE39E /* DetailTeamProvider.swift in Sources */,
+				0976ACDE27FB6272004DE39E /* ButtonLoginModifier.swift in Sources */,
 				0976AC4D27EB96FC004DE39E /* MatchEventsServerModel.swift in Sources */,
 				0976AB2027DCAF39004DE39E /* LeagueServerModel.swift in Sources */,
 				0976AC6227ED0A29004DE39E /* LineupsMatchView.swift in Sources */,
+				0976ACE927FC69F1004DE39E /* LoginViewModel.swift in Sources */,
 				0976AB0427DCA5FB004DE39E /* Utils.swift in Sources */,
 				0976ABB227E24BC9004DE39E /* MatchViewModel.swift in Sources */,
 				0976AB0827DCA612004DE39E /* Obfuscator.swift in Sources */,
@@ -741,12 +789,14 @@
 				0976ACCF27F6066B004DE39E /* FavouritesProvider.swift in Sources */,
 				0976ABF727E8FEF5004DE39E /* TeamMatchesCoordinator.swift in Sources */,
 				0976ABCE27E39DD6004DE39E /* LoaderModifier.swift in Sources */,
+				0976ACEC27FC69F1004DE39E /* LoginCoordinator.swift in Sources */,
 				0976AC4727EB7B17004DE39E /* DetailMatchInteractor.swift in Sources */,
 				0976AB9C27E1F22B004DE39E /* Tabs.swift in Sources */,
 				0976ACAA27F23037004DE39E /* ProgressBar.swift in Sources */,
 				0976AC4627EB7B17004DE39E /* DetailMatchCoordinator.swift in Sources */,
 				0976AC6627ED1675004DE39E /* EventsMatchView.swift in Sources */,
 				0976AB0B27DCA650004DE39E /* Constants.swift in Sources */,
+				0976ACED27FC69F1004DE39E /* LoginInteractor.swift in Sources */,
 				0976ACCE27F6066B004DE39E /* FavouritesViewModel.swift in Sources */,
 				0976AC8427EF4990004DE39E /* RankingsInteractor.swift in Sources */,
 				0976AB3C27DE6E40004DE39E /* StandingTeamItem.swift in Sources */,
@@ -768,6 +818,7 @@
 				0976ABD227E39EBC004DE39E /* HudView.swift in Sources */,
 				0976AC8E27EF85FE004DE39E /* RankingPlayerList.swift in Sources */,
 				0976AC0C27E9DE3A004DE39E /* PlayerDetailStatisticsModelView.swift in Sources */,
+				0976ACE127FB652B004DE39E /* TextFieldLoginModifier.swift in Sources */,
 				0976ACA027F216F4004DE39E /* TeamStatisticsProvider.swift in Sources */,
 				0976AC6D27EE4830004DE39E /* StatisticsMatchView.swift in Sources */,
 				0976AC1D27EA4495004DE39E /* LeagueRoundsInteractor.swift in Sources */,
@@ -912,7 +963,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luispalencia.cice.Tecnologia.IOS.LiveGoal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luispalencia.technology.LiveGoal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -933,7 +984,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luispalencia.cice.Tecnologia.IOS.LiveGoal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luispalencia.technology.LiveGoal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -962,6 +1013,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0976ACF627FC79A8004DE39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0976ACF727FC79A8004DE39E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0976ACF627FC79A8004DE39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0976ACF927FC79A8004DE39E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0976ACF627FC79A8004DE39E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0976AAD927DCA4C7004DE39E /* Project object */;
 }
