@@ -74,7 +74,7 @@ struct DetailTeamView: View {
     var headerView: some View{
         ZStack(alignment: .center, content: {
             if self.viewModel.dataTeamInfo?.venue?.imageUrl != nil {
-                StadiumImageTest(imageStadiumUrl: (self.viewModel.dataTeamInfo?.venue?.imageUrl)!)
+                StadiumImage(imageStadiumUrl: (self.viewModel.dataTeamInfo?.venue?.imageUrl)!)
             }
             
             
