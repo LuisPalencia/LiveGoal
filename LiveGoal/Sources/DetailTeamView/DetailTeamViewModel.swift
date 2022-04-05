@@ -59,7 +59,7 @@ final class DetailTeamViewModel: BaseViewModel, ObservableObject {
     }
     
     func fetchDataTeamPlayers(){
-        self.interactor?.fetchDataTeamPlayersProvider()
+        //self.interactor?.fetchDataTeamPlayersProvider()
     }
     
     func getCurrentSeason() -> Int{
