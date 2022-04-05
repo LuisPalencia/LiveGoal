@@ -40,7 +40,7 @@ struct DetailPlayerView: View {
                 }
             }
         }
-        
+        .edgesIgnoringSafeArea(.all)
         //.padding(.horizontal, 8)
         .onAppear {
             self.viewModel.fetchData()
