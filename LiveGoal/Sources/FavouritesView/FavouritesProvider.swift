@@ -42,7 +42,7 @@ final class FavouritesProvider: BaseProvider{
     let networkService: NetworkServiceInputProtocol = NetworkService()
     var cancellable: Set<AnyCancellable> = []
     
-    func getMoviesFromDB(completionHandler: @escaping (DownloadNewModels?) -> ()){
+    func getTeamsFromDB(completionHandler: @escaping (DownloadNewModels?) -> ()){
         DDBB.shared.getAllLocal { results in
             completionHandler(results)
         } failure: { error in
@@ -77,7 +77,7 @@ extension FavouritesProvider: FavouritesProviderInputProtocol{
     func fetchDataFromDBProvider() {
         var favouriteTeams: [DownloadNewModel] = []
         
-        self.getMoviesFromDB { results in
+        self.getTeamsFromDB { results in
             results?.downloads.map{ item in
                 item.map { itemX in
                     print(itemX)
