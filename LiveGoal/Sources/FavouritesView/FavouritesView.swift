@@ -32,30 +32,45 @@ struct FavouritesView: View {
     var body: some View {
         VStack{
             ScrollView(.vertical, showsIndicators: false){
-            Image("laliga_logo_color")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 300, height: 35)
-            Text("Favourite teams")
-                .font(.title3)
-                .fontWeight(.bold)
-                .padding(.horizontal)
-                .padding(.bottom, 6)
+                Image("laliga_logo_color")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 300, height: 35)
+                Text("Favourite teams")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .padding(.horizontal)
+                    .padding(.bottom, 6)
             
-            
-                ForEach(0..<self.viewModel.dataFavouriteTeams.count/2) { row in
-                    HStack{
-                        ForEach(0..<2) { column in
-                            
+                if self.viewModel.dataFavouriteTeams.count > 0 {
+//                    ForEach(0..<self.viewModel.dataFavouriteTeams.count/2) { row in
+//                        HStack{
+//                            ForEach(0..<2) { column in
+//
+//
+//                                NavigationLink(
+//                                    destination: DetailTeamCoordinator.view(dto: DetailTeamCoordinatorDTO(idTeam: self.viewModel.dataFavouriteTeams[row * 2 + column].getIdInt(), season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0, idLeague: Constants.laLigaId)),
+//                                    label: {
+//                                        FavouriteItem(model: self.viewModel.dataFavouriteTeams[row * 2 + column])
+//                                }).buttonStyle(PlainButtonStyle())
+//                            }
+//                        }
+//                    }
+                    
+                    LazyVGrid(columns: Array(repeating: GridItem(), count: 2), content: {
+                        ForEach(self.viewModel.dataFavouriteTeams){ itemRow in
+
                             
                             NavigationLink(
-                                destination: DetailTeamCoordinator.view(dto: DetailTeamCoordinatorDTO(idTeam: self.viewModel.dataFavouriteTeams[row * 2 + column].getIdInt(), season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0, idLeague: Constants.laLigaId)),
+                                destination: DetailTeamCoordinator.view(dto: DetailTeamCoordinatorDTO(idTeam: itemRow.getIdInt(), season: self.viewModel.dataCurrentSeasonLeague?.year ?? 0, idLeague: Constants.laLigaId)),
                                 label: {
-                                    FavouriteItem(model: self.viewModel.dataFavouriteTeams[row * 2 + column])
-                            }).buttonStyle(PlainButtonStyle())
+                                    FavouriteItem(model: itemRow)
+                                }
+                            ).buttonStyle(PlainButtonStyle())
                         }
-                    }
+                    })
                 }
+                
             }
             .padding(.horizontal, 8)
         }
