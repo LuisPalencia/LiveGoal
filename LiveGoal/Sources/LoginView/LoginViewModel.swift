@@ -25,6 +25,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import Foundation
 import FirebaseAuth
+import AlertToast
 
 
 enum LoginOption{
@@ -60,6 +61,10 @@ final class LoginViewModel: BaseViewModel, ObservableObject {
     @Published var userAuthenticated = false
     @Published var error: NSError?
     
+    @Published var showToast = false
+    @Published var alertToast = AlertToast(type: .regular, title: "")
+    
+    
     private let authenticationData = Auth.auth()
     
     required init() {
@@ -77,28 +82,64 @@ final class LoginViewModel: BaseViewModel, ObservableObject {
     
     // Sign in
     func signIn(with loginOption: LoginOption){
-        self.userAuthenticated = true
-        self.error = nil
+        
         switch loginOption {
         case .sessionWithApple:
+            self.userAuthenticated = true
+            self.error = nil
             print("Login con Apple")
         case let .emailAndPassword(email, password):
+            let result = Utils.checkValidEmail(email: email)
+
+            guard result else {
+                self.error = NSError(domain: "", code: 9210, userInfo: [NSLocalizedDescriptionKey: "You must enter a valid email address"])
+                self.alertToast = AlertToast(type: .error(.red), title: "Error", subTitle: "You must enter a valid email address")
+                self.showToast.toggle()
+                return
+            }
+            
+            self.userAuthenticated = true
+            self.error = nil
+            
             authenticationData.signIn(withEmail: email,
                                       password: password,
-                                      completion: handlerAuthenticationState)
+                                      completion: handlerSignInCompletion)
         }
     }
     
     // Sign up
     func signUp(email: String, password: String, passwordConfirmation: String){
+        // Check if email is correct
+        let result = Utils.checkValidEmail(email: email)
+        
+        guard result else {
+            self.error = NSError(domain: "", code: 9210, userInfo: [NSLocalizedDescriptionKey: "You must enter a valid email address"])
+            self.alertToast = AlertToast(type: .error(.red), title: "Error", subTitle: "You must enter a valid email address")
+            self.showToast.toggle()
+            return
+        }
+        
+        // check if passwords are the same
+        
         guard password == passwordConfirmation else {
-            self.error = NSError(domain: "", code: 9210, userInfo: [NSLocalizedDescriptionKey: "La password y la confirmacion no son iguales"])
+            self.error = NSError(domain: "", code: 9210, userInfo: [NSLocalizedDescriptionKey: "Password and confirmation password are not the same"])
+            self.alertToast = AlertToast(type: .error(.red), title: "Error", subTitle: "Password and confirmation password are not the same")
+            self.showToast.toggle()
+            return
+        }
+        
+        // Check if the passwords have a minimun lentgh
+        
+        guard password.count > 6 else {
+            self.error = NSError(domain: "", code: 9210, userInfo: [NSLocalizedDescriptionKey: "The password must be at least 7 characters long"])
+            self.alertToast = AlertToast(type: .error(.red), title: "Error", subTitle: "The password must be at least 7 characters long")
+            self.showToast.toggle()
             return
         }
         
         self.userAuthenticated = true
         self.error = nil
-        authenticationData.createUser(withEmail: email, password: password, completion: handlerAuthenticationState)
+        authenticationData.createUser(withEmail: email, password: password, completion: handlerSignUpCompletion)
     }
     
     // Logout
@@ -110,18 +151,48 @@ final class LoginViewModel: BaseViewModel, ObservableObject {
         }
     }
     
-    
-    // Handler
-    private func handlerAuthenticationState(with auth: AuthDataResult?, and error: Error?){
+    // Handlers
+    private func handlerSignInCompletion(with auth: AuthDataResult?, and error: Error?){
         DispatchQueue.main.async {
             self.userAuthenticated = false
             if let user = auth?.user {
                 self.userLogged = user
+                //self.alertToast = AlertToast(type: .complete(.green), title: "Success!", subTitle: "Welcome again!")
+                //self.showToast.toggle()
             }else if let errorUnw = error {
                 self.error = errorUnw as NSError
+                self.alertToast = AlertToast(type: .error(.red), title: "Error", subTitle: "Credentials are not correct")
+                self.showToast.toggle()
             }
         }
     }
+    
+    // Handlers
+    private func handlerSignUpCompletion(with auth: AuthDataResult?, and error: Error?){
+        DispatchQueue.main.async {
+            self.userAuthenticated = false
+            if let user = auth?.user {
+                self.userLogged = user
+                self.alertToast = AlertToast(type: .complete(.green), title: "Success!", subTitle: "Account created successfully")
+                self.showToast.toggle()
+            }else if let errorUnw = error {
+                self.error = errorUnw as NSError
+                self.alertToast = AlertToast(type: .error(.red), title: "Error", subTitle: "An error ocurred when trying to create the account")
+                self.showToast.toggle()
+            }
+        }
+    }
+    
+//    private func handlerAuthenticationState(with auth: AuthDataResult?, and error: Error?){
+//        DispatchQueue.main.async {
+//            self.userAuthenticated = false
+//            if let user = auth?.user {
+//                self.userLogged = user
+//            }else if let errorUnw = error {
+//                self.error = errorUnw as NSError
+//            }
+//        }
+//    }
 }
 
 

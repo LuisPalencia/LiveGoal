@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct LoginView: View {
     
@@ -98,6 +99,9 @@ struct LoginView: View {
                     })
                 }
             })
+        }
+        .toast(isPresenting: self.$viewModelSession.showToast) {
+            self.viewModelSession.alertToast
         }
     }
     
