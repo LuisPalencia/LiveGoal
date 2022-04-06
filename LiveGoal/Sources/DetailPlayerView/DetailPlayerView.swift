@@ -99,7 +99,7 @@ struct DetailPlayerView: View {
             }
         })
         //.padding()
-        .padding(.bottom, 50)
+        .padding(.bottom, 80)
         .background(
             roundedShape()
                 .fill(Color.white)
