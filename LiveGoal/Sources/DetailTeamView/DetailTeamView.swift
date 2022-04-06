@@ -24,6 +24,7 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import SwiftUI
+import AlertToast
 
 struct DetailTeamView: View {
     @StateObject var viewModel = DetailTeamViewModel()
@@ -59,6 +60,9 @@ struct DetailTeamView: View {
                     PlayersCarrousel(title: "Unknown position", players: self.viewModel.dataTeamPlayersUnknown, idTeam: self.viewModel.dataTeamInfo?.team?.id ?? 0, season: self.viewModel.getCurrentSeason())
                 }
             }
+        }
+        .toast(isPresenting: self.$viewModel.showToast) {
+            self.viewModel.alertToast
         }
         .padding(.bottom, 80)
         //.padding(.top, 50)

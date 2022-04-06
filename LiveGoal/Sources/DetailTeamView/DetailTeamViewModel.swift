@@ -24,6 +24,7 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
+import AlertToast
 
 // Output del Interactor
 protocol DetailTeamInteractorOutputProtocol: BaseInteractorOutputProtocol {
@@ -53,6 +54,10 @@ final class DetailTeamViewModel: BaseViewModel, ObservableObject {
     @Published var dataTeamPlayersUnknown: [Player] = []
     @Published var isTeamFavourite = false
     
+    @Published var showToast = false
+    @Published var alertToast = AlertToast(type: .regular, title: "")
+    
+    
     // MARK: - Metodospublicos
     func fetchData(){
         self.interactor?.fetchDataTeamInfoProvider()
@@ -70,9 +75,13 @@ final class DetailTeamViewModel: BaseViewModel, ObservableObject {
         if !self.isTeamFavourite {
             self.interactor?.saveDataAsFavouriteInteractor(name: self.dataTeamInfo?.team?.name ?? "", logo: self.dataTeamInfo?.team?.logo ?? "")
             self.isTeamFavourite = true
+            self.alertToast = AlertToast(type: .complete(.green), title: "Success", subTitle: "\(self.dataTeamInfo?.team?.name ?? "") team added to favourites")
+            self.showToast.toggle()
         }else{
             self.interactor?.removeDataAsFavouriteInteractor(name: self.dataTeamInfo?.team?.name ?? "", logo: self.dataTeamInfo?.team?.logo ?? "")
             self.isTeamFavourite = false
+            self.alertToast = AlertToast(type: .regular, title: "Success", subTitle: "\(self.dataTeamInfo?.team?.name ?? "") team removed from favourites")
+            self.showToast.toggle()
         }
         
         
