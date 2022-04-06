@@ -222,6 +222,17 @@ class Utils {
         }
     }
     
+    static func checkValidEmail(email: String) -> Bool {
+        let emailPattern = #"^\S+@\S+\.\S+$"#
+        
+        let result = email.range(
+            of: emailPattern,
+            options: .regularExpression
+        )
+        
+        return result != nil
+    }
+    
     static func transformDataResponseLeagueToCurrentSeasonLeagueModelView(data: [ResponseLeague]?) -> CurrentSeasonLeagueModelView?{
         var currentSeasonLeague: CurrentSeasonLeagueModelView? = nil
         
