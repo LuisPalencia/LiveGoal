@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewModelSession: LoginViewModel
+    
     var body: some View {
         //LeagueClassificationCoordinator.navigation()
-        HomeView()
+        //HomeView()
+        if self.viewModelSession.userLogged != nil {
+            HomeView()
+        }else{
+            LoginView(authType: .signIn)
+        }
+        
     }
 }
 

@@ -130,11 +130,9 @@
 		0976ACDE27FB6272004DE39E /* ButtonLoginModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACDD27FB6272004DE39E /* ButtonLoginModifier.swift */; };
 		0976ACE127FB652B004DE39E /* TextFieldLoginModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE027FB652B004DE39E /* TextFieldLoginModifier.swift */; };
 		0976ACE927FC69F1004DE39E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE427FC69F0004DE39E /* LoginViewModel.swift */; };
-		0976ACEA27FC69F1004DE39E /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE527FC69F0004DE39E /* LoginProvider.swift */; };
-		0976ACEC27FC69F1004DE39E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE727FC69F1004DE39E /* LoginCoordinator.swift */; };
-		0976ACED27FC69F1004DE39E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ACE827FC69F1004DE39E /* LoginInteractor.swift */; };
 		0976ACF827FC79A8004DE39E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0976ACF727FC79A8004DE39E /* FirebaseAuth */; };
 		0976ACFA27FC79A8004DE39E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0976ACF927FC79A8004DE39E /* FirebaseFirestore */; };
+		0976AD0027FCA741004DE39E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0976ACFF27FCA741004DE39E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -263,9 +261,7 @@
 		0976ACDD27FB6272004DE39E /* ButtonLoginModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoginModifier.swift; sourceTree = "<group>"; };
 		0976ACE027FB652B004DE39E /* TextFieldLoginModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLoginModifier.swift; sourceTree = "<group>"; };
 		0976ACE427FC69F0004DE39E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		0976ACE527FC69F0004DE39E /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
-		0976ACE727FC69F1004DE39E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		0976ACE827FC69F1004DE39E /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		0976ACFF27FCA741004DE39E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +296,7 @@
 		0976AAE327DCA4C7004DE39E /* LiveGoal */ = {
 			isa = PBXGroup;
 			children = (
+				0976ACFF27FCA741004DE39E /* GoogleService-Info.plist */,
 				0976ABCC27E39DBA004DE39E /* ViewModifiers */,
 				0976ABBA27E268E4004DE39E /* Models */,
 				0976AB3927DE6DC1004DE39E /* Components */,
@@ -616,9 +613,6 @@
 			children = (
 				0976ACD927FB5A22004DE39E /* LoginView.swift */,
 				0976ACE427FC69F0004DE39E /* LoginViewModel.swift */,
-				0976ACE527FC69F0004DE39E /* LoginProvider.swift */,
-				0976ACE727FC69F1004DE39E /* LoginCoordinator.swift */,
-				0976ACE827FC69F1004DE39E /* LoginInteractor.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -698,6 +692,7 @@
 				0976ABAC27E2473C004DE39E /* TeamPlayers.json in Resources */,
 				0976AC5927EB98D6004DE39E /* MatchLineups.json in Resources */,
 				0976AC1027E9E406004DE39E /* DetailPlayer.json in Resources */,
+				0976AD0027FCA741004DE39E /* GoogleService-Info.plist in Resources */,
 				0976AB5027DFB561004DE39E /* TeamInfo.json in Resources */,
 				0976AB3327DE605C004DE39E /* LeagueStanding.json in Resources */,
 				0976AC5327EB98B7004DE39E /* MatchStatistics.json in Resources */,
@@ -726,7 +721,6 @@
 				0976ACA127F216F4004DE39E /* TeamStatisticsView.swift in Sources */,
 				0976ABB827E26820004DE39E /* MatchStatus.swift in Sources */,
 				0976AB4927DF973E004DE39E /* DetailTeamInteractor.swift in Sources */,
-				0976ACEA27FC69F1004DE39E /* LoginProvider.swift in Sources */,
 				0976ABA027E20E27004DE39E /* MatchResult.swift in Sources */,
 				0976AC6927EE2DF6004DE39E /* MatchStatisticTypes.swift in Sources */,
 				0976AB1827DCA847004DE39E /* LeagueClassificationProvider.swift in Sources */,
@@ -785,14 +779,12 @@
 				0976ACCF27F6066B004DE39E /* FavouritesProvider.swift in Sources */,
 				0976ABF727E8FEF5004DE39E /* TeamMatchesCoordinator.swift in Sources */,
 				0976ABCE27E39DD6004DE39E /* LoaderModifier.swift in Sources */,
-				0976ACEC27FC69F1004DE39E /* LoginCoordinator.swift in Sources */,
 				0976AC4727EB7B17004DE39E /* DetailMatchInteractor.swift in Sources */,
 				0976AB9C27E1F22B004DE39E /* Tabs.swift in Sources */,
 				0976ACAA27F23037004DE39E /* ProgressBar.swift in Sources */,
 				0976AC4627EB7B17004DE39E /* DetailMatchCoordinator.swift in Sources */,
 				0976AC6627ED1675004DE39E /* EventsMatchView.swift in Sources */,
 				0976AB0B27DCA650004DE39E /* Constants.swift in Sources */,
-				0976ACED27FC69F1004DE39E /* LoginInteractor.swift in Sources */,
 				0976ACCE27F6066B004DE39E /* FavouritesViewModel.swift in Sources */,
 				0976AC8427EF4990004DE39E /* RankingsInteractor.swift in Sources */,
 				0976AB3C27DE6E40004DE39E /* StandingTeamItem.swift in Sources */,

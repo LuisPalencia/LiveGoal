@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject var viewModel = LoginViewModel()
+    @EnvironmentObject var viewModelSession: LoginViewModel
     @State var authType: AuthenticationType
     
     @State var email: String = ""
@@ -41,7 +41,7 @@ struct LoginView: View {
                     .padding(.bottom, 10)
                     .foregroundColor(.gray)
                 
-                if true {
+                if !self.viewModelSession.userAuthenticated {
                     VStack(spacing: 20, content: {
                         TextField("Email", text: self.$email)
                             .textFieldLoginStyle()
@@ -102,12 +102,12 @@ struct LoginView: View {
     }
     
     private func authEmailTouched(){
-//        switch authType {
-//        case .signIn:
-//            self.viewModelSession.signIn(with: .emailAndPassword(email: self.email, password: self.password))
-//        case .signUp:
-//            self.viewModelSession.signUp(email: self.email, password: self.password, passwordConfirmation: self.confirmationPassword)
-//        }
+        switch authType {
+        case .signIn:
+            self.viewModelSession.signIn(with: .emailAndPassword(email: self.email, password: self.password))
+        case .signUp:
+            self.viewModelSession.signUp(email: self.email, password: self.password, passwordConfirmation: self.confirmationPassword)
+        }
     }
     
     private func footerTouched(){
