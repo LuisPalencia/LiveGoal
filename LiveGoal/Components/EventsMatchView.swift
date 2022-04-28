@@ -95,7 +95,7 @@ struct EventMatchView: View {
             }
             
             //imageEvent = "repeat.circle"
-            imageEvent = "substitution"
+            imageEvent = "substitution_color"
         
         case "var":
             if (self.matchEvent.team?.id ?? 0) == idHomeTeam {
