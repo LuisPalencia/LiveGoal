@@ -199,25 +199,31 @@ struct HeaderDetailMatch: View {
     var body: some View {
         ZStack(alignment: .center, content: {
             HStack{
-                VStack(alignment: .center, spacing: 20, content: {
-                    if self.imageLoaderHomeTeamVM.image != nil {
-                        Image(uiImage: self.imageLoaderHomeTeamVM.image!)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 60, height: 60)
-                        
-                    }else{
-                        Circle().fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .bottom, endPoint: .top))
-                            .clipShape(Circle())
-                            .frame(width: 60, height: 60)
-                    }
-                    
-                    Text(self.match.teams?.home?.name ?? "")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                })
-                .frame(maxWidth: .infinity)
-                .padding(.leading, 10)
+                NavigationLink(
+                    destination: DetailTeamCoordinator.view(dto: DetailTeamCoordinatorDTO(idTeam: self.match.teams?.home?.id ?? 0, season: self.match.season ?? 0, idLeague: Constants.laLigaId)),
+                    label: {
+                        VStack(alignment: .center, spacing: 20, content: {
+                            if self.imageLoaderHomeTeamVM.image != nil {
+                                Image(uiImage: self.imageLoaderHomeTeamVM.image!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 60, height: 60)
+                                
+                            }else{
+                                Circle().fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .bottom, endPoint: .top))
+                                    .clipShape(Circle())
+                                    .frame(width: 60, height: 60)
+                            }
+                            
+                            Text(self.match.teams?.home?.name ?? "")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                        })
+                        .frame(maxWidth: .infinity)
+                        .padding(.leading, 10)
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                
                 
                 VStack(alignment: .center, spacing: 12, content: {
                     Text(self.match.leagueName ?? "")
@@ -238,25 +244,32 @@ struct HeaderDetailMatch: View {
                 })
                 .frame(maxWidth: .infinity)
                 
-                VStack(alignment: .center, spacing: 20, content: {
-                    if self.imageLoaderAwayTeamVM.image != nil {
-                        Image(uiImage: self.imageLoaderAwayTeamVM.image!)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 60, height: 60)
-                        
-                    }else{
-                        Circle().fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .bottom, endPoint: .top))
-                            .clipShape(Circle())
-                            .frame(width: 60, height: 60)
-                    }
-                    
-                    Text(self.match.teams?.away?.name ?? "")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                })
-                .frame(maxWidth: .infinity)
-                .padding(.trailing, 10)
+                NavigationLink(
+                    destination: DetailTeamCoordinator.view(dto: DetailTeamCoordinatorDTO(idTeam: self.match.teams?.away?.id ?? 0, season: self.match.season ?? 0, idLeague: Constants.laLigaId)),
+                    label: {
+                        VStack(alignment: .center, spacing: 20, content: {
+                            if self.imageLoaderAwayTeamVM.image != nil {
+                                Image(uiImage: self.imageLoaderAwayTeamVM.image!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 60, height: 60)
+                                
+                            }else{
+                                Circle().fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .bottom, endPoint: .top))
+                                    .clipShape(Circle())
+                                    .frame(width: 60, height: 60)
+                            }
+                            
+                            Text(self.match.teams?.away?.name ?? "")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                        })
+                        .frame(maxWidth: .infinity)
+                        .padding(.trailing, 10)
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                
+                
             }
         })
         .padding([.bottom], 10)
