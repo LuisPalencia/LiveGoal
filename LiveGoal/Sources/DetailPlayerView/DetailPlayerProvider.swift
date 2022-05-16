@@ -107,7 +107,7 @@ struct DetailPlayerRequestDTO {
         let argument: [CVarArg] = [idPlayer, idTeam, season, idLeague]
         let urlComplete = String(format: URLEnpoint.endpointPlayerStatistics, arguments: argument)
         var headers = URLEnpoint.headersAPI
-        headers["x-rapidapi-key"] = Obfuscator().reveal(key: Constants.Api.apiKey)
+        headers["x-rapidapi-key"] = Obfuscator().reveal(key: Constants.getApiKey())
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService, header: headers)
         return request
     }
@@ -116,7 +116,7 @@ struct DetailPlayerRequestDTO {
         let argument: [CVarArg] = [idPlayer]
         let urlComplete = String(format: endpoint, arguments: argument)
         var headers = URLEnpoint.headersAPI
-        headers["x-rapidapi-key"] = Obfuscator().reveal(key: Constants.Api.apiKey)
+        headers["x-rapidapi-key"] = Obfuscator().reveal(key: Constants.getApiKey())
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService, header: headers)
         return request
     }
