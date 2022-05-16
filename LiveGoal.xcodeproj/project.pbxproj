@@ -53,7 +53,6 @@
 		0976ABD227E39EBC004DE39E /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ABD127E39EBC004DE39E /* HudView.swift */; };
 		0976ABD627E8DE5B004DE39E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ABD527E8DE5B004DE39E /* HomeView.swift */; };
 		0976ABDA27E8DE73004DE39E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ABD927E8DE73004DE39E /* HomeViewModel.swift */; };
-		0976ABDD27E8E69C004DE39E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ABDC27E8E69C004DE39E /* TestView.swift */; };
 		0976ABE027E8F937004DE39E /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ABDF27E8F937004DE39E /* ButtonModifier.swift */; };
 		0976ABF427E8FEF5004DE39E /* TeamMatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ABEF27E8FEF5004DE39E /* TeamMatchesViewModel.swift */; };
 		0976ABF527E8FEF5004DE39E /* TeamMatchesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976ABF027E8FEF5004DE39E /* TeamMatchesProvider.swift */; };
@@ -185,7 +184,6 @@
 		0976ABD127E39EBC004DE39E /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		0976ABD527E8DE5B004DE39E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0976ABD927E8DE73004DE39E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		0976ABDC27E8E69C004DE39E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		0976ABDF27E8F937004DE39E /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		0976ABEF27E8FEF5004DE39E /* TeamMatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMatchesViewModel.swift; sourceTree = "<group>"; };
 		0976ABF027E8FEF5004DE39E /* TeamMatchesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMatchesProvider.swift; sourceTree = "<group>"; };
@@ -378,7 +376,6 @@
 				0976ABD427E8DE3B004DE39E /* HomeView */,
 				0976AB3F27DF9704004DE39E /* DetailTeamView */,
 				0976AB1127DCA806004DE39E /* LeagueClassificationView */,
-				0976ABDC27E8E69C004DE39E /* TestView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -802,7 +799,6 @@
 				0976AC0527E91369004DE39E /* DetailPlayerInteractor.swift in Sources */,
 				0976ACD027F6066B004DE39E /* FavouritesView.swift in Sources */,
 				0976AC4427EB7B17004DE39E /* DetailMatchProvider.swift in Sources */,
-				0976ABDD27E8E69C004DE39E /* TestView.swift in Sources */,
 				0976AC7027EE7B70004DE39E /* PlayerTrophiesServerModel.swift in Sources */,
 				0976AC0427E91369004DE39E /* DetailPlayerCoordinator.swift in Sources */,
 				0976AC9727F205E2004DE39E /* TeamStatisticsServerModel.swift in Sources */,
