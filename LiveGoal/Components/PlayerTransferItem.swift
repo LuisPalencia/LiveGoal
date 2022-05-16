@@ -34,31 +34,6 @@ struct PlayerTransferItem: View {
             
             HStack(alignment: .center, spacing: 10, content: {
                 VStack(alignment: .center, spacing: 20, content: {
-                    if self.imageLoaderTeamInVM.image != nil {
-                        Image(uiImage: self.imageLoaderTeamInVM.image!)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 60, height: 60)
-                        
-                    }else{
-                        Circle().fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .bottom, endPoint: .top))
-                            .clipShape(Circle())
-                            .frame(width: 60, height: 60)
-                    }
-                    
-                    Text(self.model.teams?.teamIn?.name ?? "")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                })
-                .frame(maxWidth: .infinity)
-                
-                
-                Image(systemName: "arrow.right.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 45, height: 45)
-                
-                VStack(alignment: .center, spacing: 20, content: {
                     if self.imageLoaderTeamOutVM.image != nil {
                         Image(uiImage: self.imageLoaderTeamOutVM.image!)
                             .resizable()
@@ -72,6 +47,30 @@ struct PlayerTransferItem: View {
                     }
                     
                     Text(self.model.teams?.teamOut?.name ?? "")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                })
+                .frame(maxWidth: .infinity)
+                
+                Image(systemName: "arrow.right.circle")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 45, height: 45)
+                
+                VStack(alignment: .center, spacing: 20, content: {
+                    if self.imageLoaderTeamInVM.image != nil {
+                        Image(uiImage: self.imageLoaderTeamInVM.image!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 60, height: 60)
+                        
+                    }else{
+                        Circle().fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .bottom, endPoint: .top))
+                            .clipShape(Circle())
+                            .frame(width: 60, height: 60)
+                    }
+                    
+                    Text(self.model.teams?.teamIn?.name ?? "")
                         .font(.headline)
                         .fontWeight(.bold)
                 })
